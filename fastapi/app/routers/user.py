@@ -21,8 +21,8 @@ UserResponse = schema.UserResponse
 router = APIRouter(tags=['Users'])
 
 # Create a User
-@router.post("/users", status_code=status.HTTP_201_CREATED)
-async def create_post(user: schema.UserCreate, db: Session = Depends(get_db)):
+@router.post("/creatuser", status_code=status.HTTP_201_CREATED)
+async def create_user(user: schema.UserCreate, db: Session = Depends(get_db)):
     hashed_password = utils.hash(user.password)
     user.password = hashed_password
     new_user = models.User(**user.dict())
