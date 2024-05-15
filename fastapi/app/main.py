@@ -30,7 +30,7 @@ app.include_router(auth.router)
 
 @app.get('/')
 async def home():
-    return {"Message": "Welcome to the home page"}
+    return {"Message": "Welcome to the home page!!!!!"}
 
 
 # if __name__ == '__main__':
