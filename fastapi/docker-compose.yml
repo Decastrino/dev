@@ -7,7 +7,7 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - ./:/usr/src/app
+      - ./:/usr/src/app:ro # let syncing happen between local directory and directory on container (bind mount)
     # env_file:
     #   - ./.env
     environment:
