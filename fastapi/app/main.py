@@ -7,6 +7,8 @@ from .config import settings
 
 from fastapi.middleware.cors import CORSMiddleware
 
+models.Base.metadata.create_all(bind=engine)
+
 # ORM... Using SQLAlchemy's engine
 # import database engine, the get_db function and db connections so db interaction can occur
 # models.Base.metadata.create_all(bind=engine)

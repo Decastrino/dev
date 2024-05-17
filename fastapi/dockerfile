@@ -1,6 +1,6 @@
 
 # Select base image for the docker image
-FROM python:3.11.9-alpine3.19
+FROM python:3.11
 
 # Create a working directory
 WORKDIR /usr/src/app
@@ -12,7 +12,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy rest of the src code in the directory to the working directory. 
 # Copying at the bottom after all installs ensure we dont rebuild the images of all steps below it
 # anytime a code change is made to the src code. (Docker's caching mechanism should be utilized efficiently)
-COPY . .
+COPY . /usr/src/app
 
 # give the command to run the app (fastapi app)
 # gunicorn -w 1 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000

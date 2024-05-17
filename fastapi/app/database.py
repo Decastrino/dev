@@ -5,13 +5,14 @@ import psycopg2, time
 from app.config import settings
 
 #SQLALCHEMY_DATABASE_URL = "postgresql://<username>:<password>@<ip-address/hostname>/<database_name>"
-#SQLALCHEMY_DATABASE_URL = "postgresql://postgres:******@localhost/fastapi"
+#SQLALCHEMY_DATABASE_URL = "postgresql://<username>:************@localhost/fastapi"
 #SQLALCHEMY_DATABASE_URL = f'postgresql+psycopg2://{settings.database_username}:{settings.database_password}@{settings.database_hostname}:{settings.database_port}/{settings.database_name}'
 SQLALCHEMY_DATABASE_URL = f'postgresql+psycopg2://{settings.database_username}:{settings.database_password}@{settings.database_hostname}/{settings.database_name}'
 
 # Create the engine that enables/is responsible for connection to the database
-#engine = create_engine(SQLALCHEMY_DATABASE_URL, pool_pre_ping=True) # echo=True
-engine = create_engine("postgresql+psycopg2://helix:Decastrino1.@localhost/fastapi")
+# engine = create_engine("postgresql+psycopg2://<hname>:<password>@localhost/fastapi")
+engine = create_engine(SQLALCHEMY_DATABASE_URL, pool_pre_ping=True) # echo=True
+
 
 # Create the local session class for all connections to the db
 # Enables talking/creating sessions to the database via the engine created

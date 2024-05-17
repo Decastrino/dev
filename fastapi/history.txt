@@ -1,0 +1,2148 @@
+    1  pwd
+    2  nslookup helixtinubu.com
+    3  nslookup projects.helixtinubu.com
+    4  dig projects.helixtinubu.com
+    5  dig projects.helixtinubu.com
+    6  nslookup projects.helixtinubu.com
+    7  pwd
+    8  node
+    9  which node
+   10  cd Desktop
+   11  ls
+   12  cd complete-node-bootcamp-master
+   13  ls
+   14  ls -l
+   15  cd ..
+   16  ls
+   17  cd ../Documents
+   18  ls
+   19  cd Projects
+   20  ls
+   21  cd ..
+   22  ls
+   23  cd JavaScript
+   24  ls
+   25  cd ..
+   26  cd ..
+   27  ls
+   28  cd Documents
+   29  ls
+   30  cd ..
+   31  cd Downloads
+   32  ls
+   33  rm OnVUE*
+   34  cd OnVUE.app
+   35  ls
+   36  cd Contents
+   37  ls
+   38  cd ..
+   39  cd ..
+   40  rm -f OnVUE*
+   41  rm -rf OnVUE*
+   42  ls
+   43  cd ..
+   44  which npm
+   45  npm
+   46  npm help
+   47  npm help npm
+   48  pwd
+   49  ls
+   50  cd Desktop
+   51  ls
+   52  cd complete-node-bootcamp-master
+   53  ls
+   54  cd 1-node-farm
+   55  ls
+   56  cd final
+   57  ls
+   58  vi index.js
+   59  ls
+   60  cd dev-data
+   61  ls
+   62  vi data.json
+   63  cd ..
+   64  ls
+   65  cd templates
+   66  ls
+   67  vi template-card.html
+   68  vi template-overview.html
+   69  cat /etc/services
+   70  vi /etc/services
+   71  c
+   72  clear
+   73  pwd
+   74  cd ../..
+   75  cd ..
+   76  cd ..
+   77  ls
+   78  clear
+   79  ls
+   80  clear
+   81  brew install git
+   82  ssh-keygen -t ed25519 -C "tinubuseyi@gmail.com"
+   83  ls ~/.ssh/
+   84  pbcopy < ~/.ssh/id_ed25519.pub
+   85  ls
+   86  ls ~/.ssh/
+   87  pbcopy < ~/.ssh/id_ed25519.pub
+   88  ls
+   89  cd ../Documents
+   90  ls
+   91  mkdir Github
+   92  cd Github
+   93  ls
+   94  mkdir Projects
+   95  cd Projects
+   96  git clone https://github.com/Decastrino/personalProjects.git
+   97  ls
+   98  cd ..
+   99  ls
+  100  cd Projects
+  101  ls
+  102  cd personalProjects
+  103  ls
+  104  ls -la
+  105  cd .git
+  106  ls
+  107  l
+  108  ls -la
+  109  vi HEAD
+  110  vi config
+  111  cd ..
+  112  ls
+  113  ls -la
+  114  vi simple-java-maven-app
+  115  cd pythonSelenium
+  116  ls
+  117  cd finding_elements
+  118  ls
+  119  vi finding_elements_by_id.py
+  120  cd ../..
+  121  ls
+  122  cd personalProjects
+  123  ls
+  124  ld Node
+  125  cd Node
+  126  ls
+  127  cd express-recipes
+  128  ls
+  129  cd src
+  130  ls
+  131  vi index.html
+  132  vi index.js
+  133  ls
+  134  cd dist
+  135  ls
+  136  vi index.dev.js
+  137  cd ..
+  138  cd ..
+  139  cd ..
+  140  ls
+  141  cd ..
+  142  cd ..
+  143  cd ..
+  144  ls
+  145  ls
+  146  ls
+  147  pwd
+  148  pwd
+  149  ls
+  150  cd Document
+  151  cd Documents
+  152  ls
+  153  cd ..
+  154  ls
+  155  echo PATH
+  156  echo $PATH
+  157  node
+  158  node -version
+  159  node --version
+  160  python --version
+  161  python3 --version
+  162  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  163  echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/helix/.zprofile
+  164  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/helix/.zprofile
+  165  eval "$(/opt/homebrew/bin/brew shellenv)"
+  166  echo $PATH
+  167  python3
+  168  brew install wget
+  169  brew install pip
+  170  pip --version
+  171  which pip
+  172  pip3 --version
+  173  which pip3
+  174  which python
+  175  which python3
+  176  echo $PATH
+  177  curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+  178  unzip awscli-bundle.zip
+  179  sudo awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+  180  sudo /usr/local/bin/python3.9.6 awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+  181  which python3
+  182  sudo /usr/bin/python3 awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+  183  aws --version
+  184  brew tap hashicorp/tap
+  185  brew install hashicorp/tap/terraform
+  186  which terraform
+  187  terraform --version
+  188  ls
+  189  echo $PATH
+  190  pwd
+  191  ls
+  192  cd Documents
+  193  terraform
+  194  cd ../Desktop
+  195  cd ../Documents
+  196  mkdir Projects
+  197  cd Projects
+  198  pwd
+  199  mkdir terraform
+  200  cd terraform
+  201  ls
+  202  vi ec2_instance.tf
+  203  ls
+  204  terraform referesh
+  205  terraform refresh
+  206  aws --version
+  207  aws iam list-user
+  208  aws iam list-users
+  209  ls
+  210  cd ..
+  211  ls
+  212  cd ..
+  213  ls
+  214  ls
+  215  which aws
+  216  aws configure
+  217  aws iam list-users
+  218  aws iam -h
+  219  aws s3 --help
+  220  aws help
+  221  aws s3 help
+  222  aws s3 ls
+  223  aws s3 ls
+  224  cd /var
+  225  ls
+  226  ls -l
+  227  cd ..
+  228  cd /var/www/jtml
+  229  cd /var/www/html
+  230  pwd
+  231  brew install httpd
+  232  cd /var/www/html
+  233  cd /opt/homebrew/var/www
+  234  ls
+  235  vi index.html
+  236  cd..
+  237  cd..
+  238  cd ..
+  239  ls
+  240  cd ..
+  241  ls
+  242  vi Dockerfile
+  243  ls -l
+  244  cd ..
+  245  ls
+  246  cd ..
+  247  ls -l
+  248  pwd
+  249  echo $PATH
+  250  nslookup projects.helixtinubu.com
+  251  yum install -y bind-utils
+  252  sudo brew install -y bind-utils
+  253  brew install -y bind-utils
+  254  brew install bind-utils
+  255  pwd
+  256  cd /Users/helix/Documents
+  257  aws iam list-users
+  258  ls
+  259  cd Projects
+  260  ls
+  261  aws ec2 launch-instances --help
+  262  aws ec2 run-instances --help
+  263  aws ec2 run-instances help
+  264  ls
+  265  cd ..
+  266  ls
+  267  cat credentials
+  268  mkdir ~/.aws
+  269  cd ~/.aws
+  270  ls
+  271  cat config
+  272  cat credentials
+  273  pwd
+  274  cd ../
+  275  pwd
+  276  ls
+  277  aws s3 --help
+  278  aws s3 help
+  279  aws s3 ls list-bucket
+  280  aws s3 ls help
+  281  aws s3 ls
+  282  aws s3 guessapp-bucket
+  283  aws s3 ls guessapp-bucket
+  284  pwd
+  285  mongo
+  286  mongod
+  287  mongo
+  288  mongosh
+  289  show dbs
+  290  mongosh
+  291  mongosh
+  292  mongosh --version
+  293  mongosh "mongodb+srv://cluster0.oqlrzrq.mongodb.net" --apiVersion 1 --username Helix
+  294  pwd
+  295  tracert google.com
+  296  ping google.com
+  297  trace google.com
+  298  show arp
+  299  arp
+  300  arp 127.0.0.1
+  301  arp google.com
+  302  traceroute google.com
+  303  rpm -q httpd
+  304  ipconfig/all
+  305  sudo ifconfig
+  306  ipconfig /all
+  307  ipconfig/all
+  308  sudo ifconfig
+  309  sudo ipconfig
+  310  sudo ifconfig/all
+  311  sudo ifconfig
+  312  pwd
+  313  cd ..
+  314  cd ..
+  315  cd ../Downloads
+  316  ls
+  317  sudo cp /Users/helix/Downloads/mongodb-macos-x86_64-6.0.6 /Users/helix/Downloads/mongodb-macos-x86_64-6.0.6/bin/mongos /Users/helix/Downloads/mongodb-macos-x86_64-6.0.6/bin/install_compass /Users/helix/Downloads/mongodb-macos-x86_64-6.0.6/bin/mongod  /usr/local/bin
+  318  sudo cp /Users/helix/Downloads/mongodb-macos-x86_64-6.0.6/bin/mongos /Users/helix/Downloads/mongodb-macos-x86_64-6.0.6/bin/install_compass /Users/helix/Downloads/mongodb-macos-x86_64-6.0.6/bin/mongod  /usr/local/bin
+  319  ls
+  320  cd /usr/local/bin
+  321  ls
+  322  ls -l
+  323  sudo mkdir /data/db
+  324  ls
+  325  sudo mkdir /data/db
+  326  sudo mkdir /data
+  327  ls
+  328  sudo mkdir -p /data/db
+  329  cd /data
+  330  ls -ld /data/db/
+  331  cd
+  332  ls
+  333  pwd
+  334  sudo mkdir -p /data/db
+  335  sudo mkdir -p /System/Volumes/Data/data/db
+  336  sudo chown -R `id -un` /System/Volumes/Data/data/db
+  337  mongod
+  338  mongod
+  339  clear
+  340  brew services run mongodb-community
+  341  brew services run mongodb-atlas-cli
+  342  ls
+  343  brew services run mongodb-community
+  344  brew tap mongodb/brew
+  345  brew install mongodb-community@6.0
+  346  brew services start mongodb/brew/mongodb-community
+  347  mongod --version
+  348  mongod
+  349  brew services start mongodb/brew/mongodb-community@6.0
+  350  brew services restart mongodb-community
+  351  mongod
+  352  brew services restart mongodb-community
+  353  brew services list
+  354  brew services stop mongodb-community
+  355  brew services run mongodb-community
+  356  mongo
+  357  mongod
+  358  mongo
+  359  sudo pkill -f mongod
+  360  mongod
+  361  npx kill-port 27017
+  362  mongod
+  363  lsof -i | grep 27017
+  364  chown - R MongoDb: MongoDb/var/lib/MongoDb
+  365  sudo mkdir -p /System/Volumes/Data/data/db
+  366  sudo chown -R `id -un` /System/Volumes/Data/data/db
+  367  sudo mongod --dbpath /System/Volumes/Data/data/db
+  368  sudo chown -R `id -un` /System/Volumes/Data/data/db
+  369  brew services restart mongodb-community@6.0
+  370  sudo mongod --dbpath /System/Volumes/Data/data/db
+  371  sudo systemctl stop mongod
+  372  lsof -i | grep 27017
+  373  lsof -i :27017 | awk '{print $2}' | tail -n 1 | xargs kill -9
+  374  lsof -i :27017 | awk '{print $2}' | tail -n 1 | xargs kill -9
+  375  lsof -i | grep 27017
+  376  sudo mongod --dbpath /System/Volumes/Data/data/db
+  377  clear
+  378  pwd
+  379  ls
+  380  cd Desktop
+  381  vi test.py
+  382  pytest
+  383  pip install pytest
+  384  pip3 install pytest
+  385  /Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip
+  386  python3 -m pip install --upgrade pip
+  387  pytest
+  388  pytest --version
+  389  pip3 install -U pytest
+  390  pytest --version
+  391  python pytest
+  392  python3 pytest
+  393  echo "alias python=/usr/bin/python3" >> ~/.zshrc
+  394  pytest --version
+  395  python3 -m pytest --version
+  396  python3 -m pytest
+  397  python3 -m pytest test.py
+  398  python3 -m pytest *test.py
+  399  \n
+  400  clear
+  401  pwd
+  402  aws
+  403  aws help
+  404  aws configure
+  405  aws configure
+  406  ls
+  407  cd
+  408  ls -lah
+  409  cd .aws
+  410  ls
+  411  l
+  412  ll
+  413  ls -l
+  414  cd config
+  415  vi config
+  416  vi credentials
+  417  cd
+  418  cd Downloads
+  419  ls -l
+  420  ls -ltr
+  421  cp terraform.pem ../Documents/Projects/terraform
+  422  cd ../Desktop
+  423  mkdir Docker
+  424  cd Docker
+  425  cd ..
+  426  ls
+  427  git clone https://github.com/docker/getting-started.git Docker
+  428  pwd
+  429  ls
+  430  ~
+  431  cd
+  432  ls
+  433  ping 127.0.0.1
+  434  arp -a
+  435  ifconfig
+  436  ping 10.0.0.22
+  437  traceroute www.google.com
+  438  ping www.google.com
+  439  pwd
+  440  g++ --version
+  441  pwd
+  442  cd /var/
+  443  ls
+  444  ls -l
+  445  cd install
+  446  ls
+  447  ls -l
+  448  cd tmp
+  449  ls
+  450  ls -ltrh
+  451  which python
+  452  which curl
+  453  curl -i https://deckofcardsapi.com/api/deck/new/ | python -m json.tool
+  454  curl https://deckofcardsapi.com/api/deck/new/ | python -m json.tool
+  455  curl https://deckofcardsapi.com/api/deck/new/ | python -m json.tool
+  456  curl https://deckofcardsapi.com/api/deck/new/ | python -m json.tool
+  457  curl https://deckofcardsapi.com/api/deck/new/ | python -m json.tool
+  458  curl https://deckofcardsapi.com/api/deck/new/ | python -m json.tool
+  459  curl https://deckofcardsapi.com/api/deck/new/ | python -m json.tool
+  460  ls
+  461  cd
+  462  ls
+  463  pip freeze
+  464  pip3 freeze
+  465  ll
+  466  ls -l
+  467  cd Desktop
+  468  ls
+  469  ls -ltr
+  470  cd ../Documents
+  471  l
+  472  ls
+  473  mkdir ProtoBuff
+  474  ls
+  475  cd ProtoBuff
+  476  ls
+  477  vi protobuff.proto
+  478  ls
+  479  ls
+  480  cd ..
+  481  cd ../Downloads
+  482  ls
+  483  ls -ltr
+  484  cd protoc-25
+  485  ls
+  486  cd bin
+  487  ls
+  488  pwd
+  489  protoc --version
+  490  ls
+  491  cd
+  492  pwd
+  493  ls
+  494  $ pip install protobuf
+  495  $ pip3 install protobuf
+  496  pip3 install protobuf
+  497  python3 -m pip install --upgrade pip
+  498  which pip
+  499  which pip3
+  500  which protobuf
+  501  which protobuf
+  502  ls
+  503  python3
+  504  pip3 freeze
+  505  which pip3
+  506  which protobuf
+  507  protoc --version
+  508  brew install protobuf
+  509  which protobuf
+  510  protoc --version
+  511  export PATH="$PATH:/Users/helix/Downloads/protoc-25/bin/"
+  512  echo $Path
+  513  echo $PATH
+  514  clear
+  515  protoc --version
+  516  which protobuf
+  517  pip3 freeze
+  518  which pytest
+  519  pwd
+  520  protobuff -v
+  521  protobuf -v
+  522  protoc -v
+  523  protoc --version
+  524  find libprotoc
+  525  which libprotoc
+  526  ls
+  527  PB_REL="https://github.com/protocolbuffers/protobuf/releases"
+  528  unzip /Users/helix/Downloads/protoc-25.0-osx-x86_64.zip -d $HOME/.local
+  529  export PATH="$PATH:$HOME/.local/bin"
+  530  which protoc
+  531  tree
+  532  ls
+  533  ls -lr
+  534  ls
+  535  cd Documents
+  536  ls
+  537  cd Projects
+  538  ls
+  539  cd Webdev
+  540  ls
+  541  cd ..
+  542  ls
+  543  cd Udemy
+  544  ls
+  545  cd JavaScript_Proj
+  546  ls
+  547  cd ..
+  548  ls
+  549  cd ..
+  550  ls
+  551  cd ..
+  552  ls
+  553  cd Github
+  554  ls
+  555  cd Projects
+  556  ls
+  557  cd personalProjects
+  558  ls
+  559  ls
+  560  ls -l
+  561  cd personalProjects
+  562  ls
+  563  cd Dj
+  564  cd Django
+  565  ls
+  566  ls
+  567  ls -ltr
+  568  cd webApp
+  569  ls
+  570  ls -ltr
+  571  cd ~
+  572  ls
+  573  git --version
+  574  which git
+  575  ls
+  576  cd Documents
+  577  ls
+  578  cd Projects
+  579  ls
+  580  cd Webdev
+  581  ls
+  582  cd ..
+  583  ls
+  584  cd Node
+  585  ls
+  586  cd ..
+  587  ls
+  588  git init
+  589  ls
+  590  ls -lah
+  591  cd .git
+  592  ls
+  593  ls -ltr
+  594  cd info
+  595  ls
+  596  cd exclude
+  597  ls -ltr
+  598  vi exclude
+  599  cd ../..
+  600  ls
+  601  ls
+  602  git status
+  603  git add Node
+  604  git add Udemy
+  605  git add Webdev
+  606  git rm --cached Webdev/React/calculator
+  607  git rm -f --cached Webdev/React/calculator
+  608  git add terraform
+  609  git status
+  610  git restore -r -f Webdev
+  611  git restore -f Webdev
+  612  git restore Webdev
+  613  ls
+  614  git stat
+  615  git status
+  616  git commit -m "Initial commit"
+  617  git status
+  618  git remote
+  619  git remote --help
+  620  git remote add staging https://github.com/Decastrino/dev
+  621  git remote
+  622  git remote -v
+  623  git branch
+  624  git remote show origin
+  625  git remote show master
+  626  git remote show staging
+  627  git push origin staging
+  628  git push --help
+  629  git push origin
+  630  git push --set-upstream origin master
+  631  git push --set-upstream staging master
+  632  git push --set-upstream staging master
+  633  git push --set-upstream staging master
+  634  git push --set-upstream staging master
+  635  git rm terraform
+  636  git rm -r -f terraform
+  637  git status
+  638  git commit -m "Initial commit"
+  639  git branch
+  640  git push --set-upstream staging master
+  641  ls
+  642  git status
+  643  git restore
+  644  git rm -r terraform
+  645  git rm terraform/.terraform/providers/registry.terraform.io/hashicorp/aws/5.6.2/darwin_arm64/terraform-provider-aws_v5.6.2_x5
+  646  git add.
+  647  git add Udemy
+  648  git add Node
+  649  git add Webdev
+  650  git rm --cached Webdev/React/calculator
+  651  git rm --cached Webdev/React/calculator -f
+  652  git commit
+  653  git commit -m "Initial commit"
+  654  git push --set-upstream staging master
+  655  ls
+  656  cd ..
+  657  ls
+  658  mkdir Projects_2
+  659  cp -r Projects ./Projects_2
+  660  ls
+  661  cd Projects_2
+  662  ls
+  663  cd Projects
+  664  ls
+  665  cd ../..
+  666  rm -r Projects
+  667  rm -rf Projects
+  668  ls
+  669  mv Projects_2/Projects .
+  670  ls
+  671  cd Projects
+  672  ls
+  673  cd ../..
+  674  cd Documents/
+  675  l
+  676  ls
+  677  rm -rf Projects_2
+  678  ls
+  679  ls -ltr
+  680  cd Projects
+  681  ls
+  682  git branch
+  683  git status
+  684  cd ..
+  685  ls
+  686  mkdir Dev
+  687  cd Dev
+  688  ls
+  689  git branch
+  690  code
+  691  cd ..
+  692  ls
+  693  cd ../Downloads
+  694  ls
+  695  ls -ltr
+  696  grep -r visual
+  697  clear
+  698  vi ~/.zshrc
+  699  pwd
+  700  ls
+  701  cd ..
+  702  ls
+  703  cd Dev
+  704  vi ~/.zshrc
+  705  code
+  706  git config --global user.name "Helix Tinubu"
+  707  git config --global user.email tinubuseyi@gmail.com
+  708  git config --global core.editor "code --wait"
+  709  git config --global -e
+  710  ls
+  711  cd Documents/Dev
+  712  git init
+  713  ls -a
+  714  cd .git
+  715  ls -l
+  716  cd ..
+  717  zsh --version
+  718  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  719  pwd
+  720  ls
+  721  cd Documents
+  722  ls
+  723  cd Dev
+  724  ls
+  725  vi ~/.zshrc
+  726  ls
+  727  cd Documents/Dev
+  728  # clone\ngit clone https://github.com/powerline/fonts.git --depth=1\n# install\ncd fonts\n./install.sh\n# clean-up a bit\ncd ..\nrm -rf fonts
+  729  brew tap homebrew/cask-fonts 
+  730  brew install font-inconsolata
+  731  mkdir -p ~/.local/share/fonts\ncd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
+  732  cd ~/Library/Fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
+  733  ls
+  734  brew install macvim --env-std --with-override-system-vim
+  735  pip3 install --user powerline-status
+  736  pip3 install --user git+git://github.com/powerline/powerline
+  737  vi ~/.zshrc
+  738  ls
+  739  cd Documents/Dev
+  740  ls
+  741  echo hello > file1.txt
+  742  echo hello > file2.txt
+  743  ls
+  744  git status
+  745  git add *.txt
+  746  git status
+  747  echo world >> file1.txt
+  748  git status
+  749  git add *.txt
+  750  git status
+  751  git commit -m "Initial commit"
+  752  ls
+  753  clear
+  754  ls -a
+  755  cd .git
+  756  ls -lah
+  757  vi config
+  758  code
+  759  git config -e
+  760  git config --global user.name "Helix Tinubu"
+  761  git config --global user.email tinubuseyi@gmail.com
+  762  git config --global core.editor "code --wait"
+  763  git config -e
+  764  cd ..
+  765  ls
+  766  ls -lah
+  767  vi ~/.gitconfig
+  768  git status -s
+  769  git status s
+  770  git branch
+  771  git status
+  772  git remote add origin https://github.com/Decastrino/dev.git
+  773  git branch -M main
+  774  git branch
+  775  git status
+  776  git push -u origin main 
+  777  git pull -h
+  778  git pull --help
+  779  git status
+  780  git pull https://github.com/Decastrino/dev.git
+  781  git clone https://github.com/Decastrino/dev.git
+  782  git branch
+  783  git status
+  784  ls
+  785  pwd
+  786  rm -rf dev/
+  787  ls
+  788  git status
+  789  git push -u origin main 
+  790  git pull
+  791  ls
+  792  cd ..
+  793  cd Dev
+  794  ls
+  795  git branch --set-upstream-to=origin/main
+  796  git push -u origin main 
+  797  git pull origin
+  798  git config pull.rebase true
+  799  git push -u origin main 
+  800  git config pull.rebase true
+  801  git pull origin
+  802  git status
+  803  git push -u origin main 
+  804  git log
+  805  ls
+  806  echo third file > file3.txt
+  807  git status
+  808  git add .
+  809  echo fourth file > file4.txt
+  810  git add .
+  811  git commit -m "Versions 2"
+  812  echo fifth file > file5.txt
+  813  git add .
+  814  git commit -m "Versions 3"
+  815  git status
+  816  git log
+  817  git branch
+  818  git log
+  819  git checkout 076f096923a8375e4facc57278823e68559b0e15
+  820  ls
+  821  git log
+  822  git switch -
+  823  git log
+  824  git checkout 076f096923a8375e4facc57278823e68559b0e15
+  825  git switch -
+  826  git log 
+  827  git log --all
+  828  git checkout 076f096923a8375e4facc57278823e68559b0e15
+  829  git log --all
+  830  git log --all --graph
+  831  ls
+  832  echo Updated > file1.txt
+  833  git add .
+  834  git commit -m "Updated file in version 1 built upon initial commit"
+  835  git status
+  836  git log
+  837  git log --all
+  838  git log --all --graph
+  839  git config --global alisa.s "status"
+  840  git s
+  841  pwd
+  842  cd Documents
+  843  ls
+  844  cd Dev
+  845  ld
+  846  ls
+  847  clear
+  848  git s
+  849  git status
+  850  git config --global alias.s "status"
+  851  git s
+  852  clear
+  853  git log -a
+  854  git log -a -g
+  855  git log --all --graph
+  856  git checkout main
+  857  git log --all --graph
+  858  vi ~/.gitconfig
+  859  git check main
+  860  ls
+  861  vi .gitignore
+  862  git add .
+  863  git cm "Add gitignore file"
+  864  git s
+  865  cd ..
+  866  ls
+  867  cd Projects
+  868  ls
+  869  git s
+  870  git log --all --graph
+  871  rm -rf .git
+  872  git log
+  873  cd ../Dev
+  874  git remote
+  875  git remote -v
+  876  git config --global credential.username "decastrino"
+  877  git push origin main
+  878  git log --all --graph
+  879  pwd
+  880  cd Desktop
+  881  pwd
+  882  mkdir BASH
+  883  cd BASH
+  884  echo HELLO
+  885  vi my_seript
+  886  cat my_seript
+  887  echo "What's good" -a
+  888  echo "What's good" >> my_seript
+  889  cat my_seript
+  890  vi my_seript
+  891  ls
+  892  pwd
+  893  vi ~/.bashrc
+  894  vi ~/.gitconfig 
+  895  history
+  896  vi ~/.zshrc
+  897  ls
+  898  vi ~/.zshrc
+  899  pwd
+  900  ls
+  901  cd Desktop
+  902  ls
+  903  cd BASH
+  904  ls
+  905  cd ../../Documents/Dev
+  906  ls
+  907  cd ..
+  908  cd ../BASH
+  909  cd ../Desktop/BASH
+  910  clear
+  911  cat my_seript
+  912  vi shelltest.sh
+  913  ls
+  914  cat shelltest.sh
+  915  sh -h
+  916  clear
+  917  pwd
+  918  bash shelltest.sh
+  919  vi shelltest.sh
+  920  shelltest.sh
+  921  bash shelltest.sh
+  922  echo $SHELL
+  923  echo $PATH
+  924  vi shelltest.sh
+  925  ./shelltest.sh
+  926  ls -l
+  927  chmod 755 shelltest.sh
+  928  ./shelltest.sh
+  929  clear
+  930  vi hello_there.sh
+  931  ls - l
+  932  ls -l
+  933  chmod 744 shelltest.sh
+  934  chmod 744 hello_there.sh
+  935  ls
+  936  rm my_seript
+  937  ls -l
+  938  ./hello_there.sh
+  939  vi hello_there.sh
+  940  ./hello_there.sh
+  941  vi hello_there.sh
+  942  ./hello_there.sh
+  943  ./shelltest.sh
+  944  vi hello_there.sh
+  945  vi interactive.sh
+  946  ls
+  947  chmod 744 interactive.sh
+  948  ./interactive.sh
+  949  vi interactive.sh
+  950  ./interactive.sh
+  951  vi interactive.sh
+  952  ./interactive.sh
+  953  vi interactive.sh
+  954  ./interactive.sh
+  955  \n
+  956  vi interactive.sh
+  957  ./interactive.sh
+  958  vi interactive.sh
+  959  vi positional_args.sh
+  960  chmod 744 positional_args.sh
+  961  ./positional_args.sh Helix Tinubu
+  962  vi positional_args.sh
+  963  echo Hello There | grep There
+  964  ls
+  965  ls -l
+  966  cat hello_there.sh
+  967  cat interactive.sh
+  968  cat positional_args.sh
+  969  cat shelltest.sh
+  970  rm shelltest.sh
+  971  ls -l | grep *.sh
+  972  ls -l
+  973  ls -l | grep .*sh
+  974  ls -l | grep *.sh
+  975  wc interactive.sh
+  976  wc -h
+  977  wc --h
+  978  wc -help
+  979  man wc
+  980  wc -lw
+  981  wc -lw interactive.sh
+  982  wc -w < interactive.sh
+  983  wc -w << interactive.sh\n\n
+  984  wc -w < interactive.sh
+  985  cat << EOF\nHey\nThere. How's it\ngoing?\nEOF
+  986  wc -w <<< "Hello there"
+  987  [ hello == hello ]
+  988  [ hello = hello ]
+  989  echo $?
+  990  [ 1 -eq 1 ] 
+  991  echo $?
+  992  [ 1 -eq 12 ] 
+  993  echo $?
+  994  vi login.sh
+  995  chmod 744 login.sh
+  996  ./login.sh boy
+  997  vi login.sh
+  998  vi login.sh helix
+  999  ./login.sh helix
+ 1000  vi login.sh
+ 1001  ./login.sh helix
+ 1002  vi login.sh
+ 1003  bash login.sh helix
+ 1004  which bash
+ 1005  vi login.sh
+ 1006  bash login.sh helix
+ 1007  ./login.sh helix
+ 1008  vi login.sh
+ 1009  ./login.sh helix
+ 1010  ./login.sh Helix
+ 1011  vi login.sh
+ 1012  ./login.sh Helix
+ 1013  ./login.sh helix
+ 1014  vi login.sh
+ 1015  ./login.sh helix
+ 1016  vi login.sh
+ 1017  ./login.sh helix
+ 1018  vi login.sh
+ 1019  ./login.sh helix
+ 1020  vi login.sh
+ 1021  ./login.sh helix
+ 1022  vi login.sh
+ 1023  ./login.sh helix
+ 1024  vi login.sh
+ 1025  ./login.sh helix
+ 1026  vi login.sh
+ 1027  ./login.sh helix
+ 1028  vi login.sh
+ 1029  ./login.sh helix
+ 1030  vi login.sh
+ 1031  ./login.sh helix
+ 1032  vi login.sh
+ 1033  ./login.sh helix
+ 1034  vi login.sh
+ 1035  ./login.sh helix
+ 1036  vi login.sh
+ 1037  ./login.sh helix
+ 1038  vi login.sh
+ 1039  vi login.sh herbert
+ 1040  ./login.sh herbert
+ 1041  vi login.sh
+ 1042  ./login.sh helix
+ 1043  clear
+ 1044  vim login_case.sh
+ 1045  ls
+ 1046  chmod 744 login_case.sh
+ 1047  bash login_case.sh helix
+ 1048  vim login_case.sh
+ 1049  bash login_case.sh helix
+ 1050  vim login_case.sh
+ 1051  bash login_case.sh helix
+ 1052  vim login_case.sh
+ 1053  bash login_case.sh helix
+ 1054  vim login_case.sh
+ 1055  bash login_case.sh helix
+ 1056  vim login_case.sh
+ 1057  bash login_case.sh helix
+ 1058  ./login_case.sh helix
+ 1059  vim login_case.sh
+ 1060  ./login_case.sh helix
+ 1061  vim login_case.sh
+ 1062  ./login_case.sh helix
+ 1063  vim login_case.sh
+ 1064  ./login_case.sh helix
+ 1065  vim login_case.sh
+ 1066  ./login_case.sh helix
+ 1067  help unset
+ 1068  help echo
+ 1069  bash -x login_case.sh
+ 1070  bash -x login_case.sh helix
+ 1071  help
+ 1072  man
+ 1073  man unset
+ 1074  sh help unset
+ 1075  run-help unset
+ 1076  run-help cat
+ 1077  run-help ls
+ 1078  vi ~/.zshrc
+ 1079  help echo
+ 1080  vi ~/.zshrc
+ 1081  help echo
+ 1082  run-help
+ 1083  run-help -d
+ 1084  vim login_case.sh
+ 1085  bash -x login_case.sh helix
+ 1086  -x ./login_case.sh helix
+ 1087  ./login_case.sh helix -x
+ 1088  ./login_case.sh helix
+ 1089  ?!
+ 1090  run-help -d
+ 1091  ?!
+ 1092  ls -l
+ 1093  vim login_case.sh
+ 1094  ./login_case.sh helix
+ 1095  vim login_case.sh
+ 1096  ./login_case.sh helix
+ 1097  vim login_case.sh
+ 1098  clear
+ 1099  ./login_case.sh helix
+ 1100  vim login_case.sh
+ 1101  ./login_case.sh helix
+ 1102  vim login_case.sh
+ 1103  bash -x login_case.sh helix
+ 1104  vim login_case.sh
+ 1105  bash -x login_case.sh helix
+ 1106  vim login_case.sh
+ 1107  vi first_funct.sh
+ 1108  chmod 744 first_funct.sh
+ 1109  ./first_funct.sh
+ 1110  vi first_funct.sh
+ 1111  ./first_funct.sh
+ 1112  uptime
+ 1113  run-help uptime
+ 1114  man uptime
+ 1115  ./first_funct.sh
+ 1116  vi first_funct.sh
+ 1117  ./first_funct.sh
+ 1118  vi first_funct.sh
+ 1119  ./first_funct.sh
+ 1120  vi first_funct.sh
+ 1121  ./first_funct.sh
+ 1122  bash -x first_funct.sh
+ 1123  vi first_funct.sh
+ 1124  ./first_funct.sh helix
+ 1125  vi first_funct.sh
+ 1126  ./first_funct.sh helix
+ 1127  sh -x first_funct.sh helix
+ 1128  vi first_funct.sh
+ 1129  uptime --pretty
+ 1130  uptime
+ 1131  uptime -p
+ 1132  run-help uptime
+ 1133  man uptime
+ 1134  uptime -pretty
+ 1135  uptime --p
+ 1136  uptime -p
+ 1137  last reboot
+ 1138  expr 3 + 4
+ 1139  echo $?
+ 1140  date
+ 1141  echo `date`
+ 1142  `date`
+ 1143  date;who
+ 1144  vi first_funct.sh
+ 1145  sh -x first_funct.sh tinbox
+ 1146  clear
+ 1147  sh first_funct.sh tinbox
+ 1148  last reboot
+ 1149  date;who
+ 1150  echo `date`
+ 1151  uptime
+ 1152  man awk
+ 1153  touch employee.txt
+ 1154  vi employee.txt
+ 1155  cat employee.txt
+ 1156  awk '{print}' employee.txt
+ 1157  awk /manager/ '{print}' employee.txt
+ 1158  awk '/manager/ {print}' employee.txt
+ 1159  awk '{print $1,$4}' employee.txt
+ 1160  awk '{print $0}' employee.txt
+ 1161  awk '{print}' employee.txt
+ 1162  awk '/sales/ {print}' employee.txt
+ 1163  cut --help
+ 1164  cut -h
+ 1165  help cut
+ 1166  run-help cut
+ 1167  uptime
+ 1168  uptime | ack -F, '{print $1 $2 $3}'
+ 1169  uptime | awk -F, '{print $1 $2 $3}'
+ 1170  uptime | awk -F, '{print $1 "time: " $2 $3}'
+ 1171  uptime | awk -F, '{print $1 " time: " $2 $3}'
+ 1172  uptime | awk -F, '{print days: $1  time: " $2 $3}'
+ 1173  pwd
+ 1174  cd
+ 1175  pwd
+ 1176  ls
+ 1177  cd ~
+ 1178  pwd
+ 1179  cd /bin/
+ 1180  ls
+ 1181  cd bash
+ 1182  vi bash
+ 1183  cd ..
+ 1184  ls
+ 1185  cd etc
+ 1186  ls
+ 1187  ls -l
+ 1188  vi zshrc
+ 1189  cd ..
+ 1190  ls
+ 1191  cd usr
+ 1192  ls
+ 1193  cd local
+ 1194  ls
+ 1195  cd bin
+ 1196  ls
+ 1197  cd ..
+ 1198  ls
+ 1199  cd include
+ 1200  ls
+ 1201  cd node
+ 1202  ls
+ 1203  cd ../..
+ 1204  cd ..
+ 1205  ls
+ 1206  cd bin
+ 1207  ls
+ 1208  pwd
+ 1209  cd ..
+ 1210  ls
+ 1211  cd ..
+ 1212  ls
+ 1213  cd Users
+ 1214  ls
+ 1215  cd Shared
+ 1216  ls
+ 1217  cd ..
+ 1218  cd helix
+ 1219  ls
+ 1220  pwd
+ 1221  clear
+ 1222  which python
+ 1223  pwd
+ 1224  which python3
+ 1225  whereis python3
+ 1226  man systemctl 
+ 1227  run-help systemctl
+ 1228  ps
+ 1229  echo shell
+ 1230  echo $shell
+ 1231  echo $Shell
+ 1232  echo $SHELL
+ 1233  docker ps
+ 1234  docker
+ 1235  docker --version
+ 1236  clear
+ 1237  docker pull nginx
+ 1238  docker images
+ 1239  docker rmi getting-started
+ 1240  docker ps
+ 1241  docker stop
+ 1242  docker rmi 648f93a1ba7d
+ 1243  clear
+ 1244  docker ps
+ 1245  docker images
+ 1246  docker rmi 4d61ed1cbb00
+ 1247  docker rmi -f 4d61ed1cbb00
+ 1248  docker ps
+ 1249  docker images
+ 1250  docker run nginx:latest
+ 1251  docker ps
+ 1252  docker image
+ 1253  docker images
+ 1254  clear
+ 1255  docker container ls
+ 1256  docker run nginx:latest
+ 1257  docker container ls
+ 1258  clear
+ 1259  docker container ls
+ 1260  docker run -d nginx:latest
+ 1261  docker ps
+ 1262  vi ~/.zshrc
+ 1263  docker ps
+ 1264  docker stop f03ed9b88d7a
+ 1265  docker ps
+ 1266  docker run -d -p 8080:80 nginx:latest
+ 1267  docker ps
+ 1268  docker stop 85b25b088391
+ 1269  clear
+ 1270  docker ps -a
+ 1271  docker ps
+ 1272  docker rm busy_jang youthful_solomon vibrant_einstein ecstatic_williams quirky_margulis
+ 1273  docker pull ubuntu
+ 1274  docker images
+ 1275  docker ps -a
+ 1276  docker run --name ubuntu-vm -d ubuntu:latest
+ 1277  docker ps -a
+ 1278  docker ps --format
+ 1279  export FORMAT=ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n
+ 1280  docker ps --format=$FORMAT
+ 1281  docker ps -a
+ 1282  export FORMAT="ID\t{{.ID}}\nNAME\t{{.Names}}\nImage\t{{.Image}}\nPORTS\t{{.Ports}}\nCOMMAND\t{{.Command}}\nCREATED\t{{.CreatedAt}}\nSTATUS\t{{.Status}}\n"
+ 1283  docker ps --format=$FORMAT
+ 1284  docker ps -a --format=$FORMAT
+ 1285  clear
+ 1286  ls
+ 1287  docker run --name website -p 8080:80 -d nginx:latest
+ 1288  pwd
+ 1289  vi Desktop/website/index.html
+ 1290  docker stop website
+ 1291  docker ps -a --format=$FORMAT
+ 1292  docker ps --format=$FORMAT
+ 1293  docker rm -f $(docker ps -aq)
+ 1294  ls
+ 1295  pwd
+ 1296  docker run --name website -v $(pwd)/Desktop/website:/usr/share/nginx/html:ro -d -p 8080:80 nginx:latest
+ 1297  docker container -l
+ 1298  docker container list
+ 1299  docker exec
+ 1300  docker exec --help
+ 1301  docker exec -it website bash
+ 1302  pwd
+ 1303  cd Desktop/website
+ 1304  ls
+ 1305  vi Dockerfile
+ 1306  docker ps -a
+ 1307  docker run --name ubuntu-container -d ubuntu:latest
+ 1308  docker ps -a
+ 1309  docker exec -it ubuntu-container
+ 1310  docker exec -it ubuntu-container bash
+ 1311  docker ps -a
+ 1312  vi Dockerfile
+ 1313  docker image ls
+ 1314  docker image
+ 1315  docker image ls
+ 1316  docker ps
+ 1317  docker container list
+ 1318  docker stop website
+ 1319  docker container list
+ 1320  docker ps
+ 1321  docker image ls
+ 1322  docker run --name ubuntu-linux -d ubuntu
+ 1323  docker image ls
+ 1324  docker ps -a
+ 1325  docker rm ubuntu-container
+ 1326  docker ps -a
+ 1327  docker run --name ubuntu-linux ubuntu
+ 1328  docker rm ubuntu-linux
+ 1329  docker run --name ubuntu-linux ubuntu
+ 1330  docker ps -a
+ 1331  docker ps
+ 1332  docker run ubuntu
+ 1333  docker ps
+ 1334  docker run ubuntu:bionic
+ 1335  docker ps
+ 1336  docker ps -a
+ 1337  docker run --it ubuntu:bionic
+ 1338  docker run -it ubuntu:bionic
+ 1339  docker ps -a
+ 1340  docker rm pendantic_solomon
+ 1341  docker rm pedantic_solomon
+ 1342  docker rm bold_buck
+ 1343  docker rm hardcore_elbakyan
+ 1344  docker rm ubuntu-linux
+ 1345  ps -a
+ 1346  docker ps -a
+ 1347  docker rm website
+ 1348  docker ps -a
+ 1349  docker image ls
+ 1350  docker rmi ubuntu:bionic
+ 1351  docker image ls
+ 1352  docker run --name ubuntu_shell -it -d ubuntu /bin/bash
+ 1353  docker ps -a
+ 1354  docker exec -it ubuntu_shell /bin/bash
+ 1355  cat /etc/os-release
+ 1356  cd /etc/
+ 1357  ls
+ 1358  ls -l
+ 1359  vi ~/.zshrc
+ 1360  pwd
+ 1361  docker --version
+ 1362  docker ps
+ 1363  docker container list
+ 1364  docker ps -a
+ 1365  docker run --name ubuntu_shell -it -d ubuntu /bin/bash
+ 1366  docker start ubuntu_shell
+ 1367  docker ps -a
+ 1368  docker exec -it ubuntu_shell /bin/bash/
+ 1369  docker exec -it ubuntu_shell /bin/bash
+ 1370  pwd
+ 1371  ls
+ 1372  clear
+ 1373  arp -a
+ 1374  arp --help
+ 1375  arp -h
+ 1376  man arp
+ 1377  arp -s
+ 1378  arp -S
+ 1379  clear
+ 1380  show arp -a
+ 1381  arp -a
+ 1382  arp -a | cat > arp.txt
+ 1383  ls
+ 1384  vi arp.txt
+ 1385  rm arp.txt
+ 1386  arp -d
+ 1387  arp -a
+ 1388  pwd
+ 1389  cd Dev
+ 1390  vi ~/.zshrc
+ 1391  ls
+ 1392  rm file5.txt file4.txt
+ 1393  ls
+ 1394  which git
+ 1395  git branch
+ 1396  git status
+ 1397  git add .
+ 1398  git commit -a 
+ 1399  git commit -m "Removed unwanted files" 
+ 1400  git status
+ 1401  git push origin/main
+ 1402  git push origin main
+ 1403  git log --all --graph
+ 1404  cd Python_API
+ 1405  ls
+ 1406  python3 -m venv venv
+ 1407  ls
+ 1408  cd venv
+ 1409  ls
+ 1410  cd ..
+ 1411  ls
+ 1412  source venv/bin/activate
+ 1413  ls
+ 1414  pwd
+ 1415  ls
+ 1416  pip3 install fastapi[all]
+ 1417  pip install fastapi[all]
+ 1418  pip3 install 'fastapi[all]'
+ 1419  /Users/helix/Documents/Dev/Python_API/venv/bin/python3 -m pip install --upgrade pip
+ 1420  pip install 'fastapi[all]'
+ 1421  clear
+ 1422  pip freeze
+ 1423  pip --version
+ 1424  pip show fastapi
+ 1425  source venv/bin/activate
+ 1426  clear
+ 1427  uvicorn main:app --reload
+ 1428  cd ..
+ 1429  ls
+ 1430  ls -lah
+ 1431  cd ./git
+ 1432  ls -lah
+ 1433  cd ..
+ 1434  ls -lah
+ 1435  rm -f .git
+ 1436  rm -rf .git
+ 1437  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1438  pwd
+ 1439  ls
+ 1440  uvicorn main:app --reload
+ 1441  clear
+ 1442  uvicorn main:app --reload
+ 1443  clear
+ 1444  uvicorn main:app --reload
+ 1445  uvicorn app/main:app --reload
+ 1446  pwd
+ 1447  cd app
+ 1448  uvicorn main:app --reload
+ 1449  cd ..
+ 1450  uvicorn app.main:app --reload
+ 1451  pip install psycopg
+ 1452  pip install psycopg2
+ 1453  pip install psycopg2-binary
+ 1454  uvicorn app.main:app --reload
+ 1455  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1456  pwd
+ 1457  cd ../..
+ 1458  ls
+ 1459  cd ..
+ 1460  ls
+ 1461  cd Documents
+ 1462  ls
+ 1463  cd ..
+ 1464  ls -lah
+ 1465  cd Desktop
+ 1466  ls
+ 1467  cd NodeProject
+ 1468  ls
+ 1469  uvicorn app.main:app --reload
+ 1470  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1471  uvicorn app.main:app --reload
+ 1472  pwd
+ 1473  python3
+ 1474  ls
+ 1475  pwd
+ 1476  nslookup 
+ 1477  arp -a
+ 1478  ls
+ 1479  whoami
+ 1480  ls
+ 1481  cd ~
+ 1482  pwd
+ 1483  rm -r .pgadmin/
+ 1484  ls
+ 1485  ls -l
+ 1486  "/Applications/Postgres.app/Contents/Versions/16/bin/psql" -p4321 "helix"
+ 1487  pwd
+ 1488  open /Library/PostgreSQL/9.2/uninstall-postgresql.app
+ 1489  open /Library/PostgreSQL/16/uninstall-postgresql.app
+ 1490  vi /Library/PostgreSQL/16/
+ 1491  open /Library/PostgreSQL/16/
+ 1492  cd /Library/PostgreSQL/16/Library
+ 1493  rm -rf /Library/PostgreSQL/
+ 1494  sudo rm -rf /Library/PostgreSQL/
+ 1495  sudo rm -rf /Library/PostgreSQL/16
+ 1496  pwd
+ 1497  cd /Library/PostgreSQL
+ 1498  ls
+ 1499  cd 16
+ 1500  ls
+ 1501  open /Library/PostgreSQL/16/pgAdmin pgAdmin\ 4.app
+ 1502  cd
+ 1503  open /Library/PostgreSQL/16/pgAdmin 4.app
+ 1504  open /Library/PostgreSQL/16/pgAdmin\ 4.app
+ 1505  sudo rm -f /Library/PostgreSQL/16/pgAdmin\ 4.app
+ 1506  sudo rm -rf /Library/PostgreSQL/16/pgAdmin\ 4.app
+ 1507  cd /Library/PostgreSQL/16/uninstall-postgresql.app
+ 1508  cd ..
+ 1509  ls
+ 1510  cd ..
+ 1511  ls
+ 1512  cd ..
+ 1513  ls
+ 1514  cd ..
+ 1515  ls
+ 1516  cd
+ 1517  ls
+ 1518  cd /
+ 1519  pwd
+ 1520  cd 
+ 1521  pwd
+ 1522  which pgAdmin
+ 1523  ource /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1524  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1525  pwd
+ 1526  history
+ 1527  clear
+ 1528  ls
+ 1529  uvicorn app:main.py --reload
+ 1530  uvicorn app:main --reload
+ 1531  uvicorn main:app --reload
+ 1532  clear
+ 1533  pwd
+ 1534  ls
+ 1535  which uvicorn
+ 1536  uvicorn main:app --reload
+ 1537  uvicorn app:main --reload
+ 1538  ls
+ 1539  cd app
+ 1540  ls
+ 1541  uvicorn main --reload
+ 1542  ls
+ 1543  cd ..
+ 1544  ls
+ 1545  cd Python_API
+ 1546  ls
+ 1547  ls -tr
+ 1548  ls -ltr
+ 1549  uvicorn app:main --reload
+ 1550  ource /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1551  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1552  pwd
+ 1553  uvicorn app:main --reload
+ 1554  uvicorn app.app:main --reload
+ 1555  cd app
+ 1556  ls
+ 1557  uvicorn app:main --reload
+ 1558  uvicorn main:app --reload
+ 1559  pip install sqlalchemy
+ 1560  pip install --upgrade pip
+ 1561  pip freeze
+ 1562  uvicorn main:app --reload
+ 1563  clear
+ 1564  uvicorn main:app --reload
+ 1565  pip freeze
+ 1566  uvicorn main:app --reload
+ 1567  pwd
+ 1568  ource /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1569  ls
+ 1570  pwd
+ 1571  history
+ 1572  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1573  uvicorn main:app --reload
+ 1574  history > entered_cmds.txt
+ 1575  ps -fA | grep python
+ 1576  ps -a | grep python
+ 1577  ps -A | grep python
+ 1578  ource /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1579  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1580  uvicorn main:app --reload
+ 1581  deactivate
+ 1582  uvicorn main:app --reload
+ 1583  deactivate
+ 1584  uvicorn main:app --reload
+ 1585  clear
+ 1586  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1587  ls
+ 1588  cd app
+ 1589  uvicorn main:app --reload
+ 1590  cd ..
+ 1591  ps -fA | grep python
+ 1592  kill 40670
+ 1593  kill 40683
+ 1594  kill 96859
+ 1595  kill 96930
+ 1596  kill 96931
+ 1597  kill 96932
+ 1598  kill 97953
+ 1599  ps -fA | grep python
+ 1600  kill 98057
+ 1601  ps -fA | grep python
+ 1602  kill 97345
+ 1603  clear
+ 1604  ps -fA | grep python
+ 1605  sudo lsof -t -i tcp:8000 | xargs kill -9
+ 1606  ps -fA | grep python
+ 1607  clear
+ 1608  uvicorn main:app --reload
+ 1609  uvicorn app.main:app --reload
+ 1610  cd app
+ 1611  uvicorn main:app --reload
+ 1612  ource /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1613  ls
+ 1614  ython -u "/Users/helix/Documents/Dev/Python_API/decode.py"
+ 1615  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1616  ls
+ 1617  deactivate
+ 1618  pwd
+ 1619  clear
+ 1620  python3 decode.py
+ 1621  python -u "/Users/helix/Documents/Dev/Python_API/decode.py"
+ 1622  python3 decode.py
+ 1623  clear
+ 1624  python3 decode.py
+ 1625  python -u "/Users/helix/Documents/Dev/Python_API/decode.py"
+ 1626  python3 decode.py
+ 1627  clear
+ 1628  python3 decode.py
+ 1629  clear
+ 1630  python3 decode.py
+ 1631  pwd
+ 1632  arp -a
+ 1633  arp -h
+ 1634  arp -nila
+ 1635  arp -nl
+ 1636  arp -l
+ 1637  arp -n
+ 1638  arp -d
+ 1639  arp -d -a
+ 1640  arp -a
+ 1641  ifconfig
+ 1642  ping google.com
+ 1643  traceroute google.com
+ 1644  arp -a
+ 1645  python -u "/Users/helix/Documents/Github/Projects/personalProjects/pythonSelenium/finding_elements/finding_elements_by_id.py"
+ 1646  pwd
+ 1647  clear
+ 1648  pip3 install selenium
+ 1649  /Library/Developer/CommandLineTools/usr/bin/python3 -m pip install --upgrade pip
+ 1650  which python
+ 1651  which python3
+ 1652  pwd
+ 1653  pip3 install selenium
+ 1654  open /Library/
+ 1655  which selenium
+ 1656  pip show selenium
+ 1657  pip3 show selenium
+ 1658  cd /Users/helix/PycharmProjects/
+ 1659  ls
+ 1660  rm -rf pythonTestingProject
+ 1661  rm -rf pythonProject1
+ 1662  rm -rf pythonProject
+ 1663  ls
+ 1664  ls -lah
+ 1665  pip3 show selenium
+ 1666  /Users/helix/Library/Python/3.9/lib/python/site-packages/selenium
+ 1667  ls
+ 1668  ls -l
+ 1669  brew install openssl@1.1
+ 1670  cd /Users/helix
+ 1671  ls
+ 1672  open PycharmProjects
+ 1673  cd PycharmProjects
+ 1674  ls
+ 1675  cd pythontestingProject
+ 1676  ls
+ 1677  cd chromedriver-mac-x64
+ 1678  ls
+ 1679  pwd
+ 1680  ls
+ 1681  xattr -d com.apple.quarantine chromedriver
+ 1682  cd /Users/helix/
+ 1683  ls
+ 1684  ls -la
+ 1685  cd .cache
+ 1686  ls
+ 1687  cd ..
+ 1688  ls -lah
+ 1689  mv -rf PycharmProjects/ ./Documents
+ 1690  mv -f PycharmProjects/ ./Documents
+ 1691  ls -lah
+ 1692  cd Documents
+ 1693  ls
+ 1694  cd PycharmProjects
+ 1695  ls
+ 1696  "/Applications/Postgres.app/Contents/Versions/16/bin/psql" -p4321 "helix"
+ 1697  ls
+ 1698  cd Dev
+ 1699  ls
+ 1700  ld Python_API
+ 1701  cd Python_API
+ 1702  ls
+ 1703  clear
+ 1704  source venv/bin/activate
+ 1705  pip3 list
+ 1706  pip install --upgrade pip
+ 1707  pip freeze
+ 1708  uvicorn app.main:app --reload
+ 1709  cd app
+ 1710  uvicorn app.main:app --reload
+ 1711  uvicorn main:app --reload
+ 1712  ps -fA | grep python
+ 1713  history
+ 1714  ps -fA | grep python
+ 1715  kill 81441
+ 1716  kill 2597
+ 1717  kill 2827
+ 1718  ps -fA | grep python
+ 1719  kill 2597
+ 1720  kill 2827
+ 1721  uvicorn main:app --reload
+ 1722  ps -fA | grep python
+ 1723  kill 81516
+ 1724  uvicorn main:app --reload
+ 1725  ps -fA | grep python
+ 1726  kill 81715
+ 1727  kill 81783
+ 1728  sudo lsof -t -i tcp:8000 | xargs kill -9
+ 1729  clear
+ 1730  uvicorn main:app --reload
+ 1731  pip install passlib[bcrypt]
+ 1732  pip3 install passlib[bcrypt]
+ 1733  pip install "passlib[bcrypt]"
+ 1734  pip freeze
+ 1735  uvicorn main:app --reload
+ 1736  pip install passlib --upgrade
+ 1737  pip show bcrypt
+ 1738  uvicorn main:app --reload
+ 1739  pip install python-jose[cryptography]
+ 1740  pip3 install python-jose[cryptography]
+ 1741  pip install "python-jose[cryptography]"
+ 1742  pip freeze
+ 1743  uvicorn main:app --reload
+ 1744  /usr/bin/python3
+ 1745  source venv/bin/activate
+ 1746  pwd
+ 1747  cd Dev/Python_API
+ 1748  source venv/bin/activate
+ 1749  uvicorn main:app --reload
+ 1750  sudo lsof -t -i tcp:8000 | xargs kill -9
+ 1751  uvicorn main:app --reload
+ 1752  cd app
+ 1753  uvicorn main:app --reload
+ 1754  clear
+ 1755  uvicorn main:app --reload
+ 1756  pip install passlib --upgrade
+ 1757  pip install "passlib[bcrypt]" --upgrade
+ 1758  uvicorn main:app --reload
+ 1759  pip install --upgrade passlib\n
+ 1760  pip install --upgrade passlib[bycrypt]\n
+ 1761  pip install --upgrade passlib[bcrypt]\n
+ 1762  pip install --upgrade passlib\n
+ 1763  pip install --upgrade "passlib[bcrypt]"\n
+ 1764  uvicorn main:app --reload
+ 1765  pip uninstall bcrypt
+ 1766  pip install bcrypt
+ 1767  pip install --upgrade bcrypt
+ 1768  uvicorn main:app --reload
+ 1769  pip uninstall bcrypt
+ 1770  pip install --upgrade bcrypt
+ 1771  uvicorn main:app --reload
+ 1772  pip install pylance
+ 1773  pip install --upgrade pylance
+ 1774  uvicorn main:app --reload
+ 1775  cd Dev/Python_API/app
+ 1776  ls
+ 1777  cd ..
+ 1778  source venv/bin/activate
+ 1779  pwd
+ 1780  cd app
+ 1781  source ../venv/bin/activate
+ 1782  uvicorn main:app --reload
+ 1783  python3 example.py
+ 1784  printenv
+ 1785  source ../venv/bin/activate
+ 1786  uvicorn main:app --reload
+ 1787  python -u "/Users/helix/Documents/Dev/Python_API/app/main.py"
+ 1788  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1789  deactivate
+ 1790  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1791  cd Dev/Python_API/app
+ 1792  uvicorn main:app --reload
+ 1793  sudo lsof -t -i tcp:8000 | xargs kill -9
+ 1794  uvicorn main:app --reload
+ 1795  grep -r ""Method Not Allowed"
+ 1796  grep -r "Method Not Allowed"
+ 1797  uvicorn main:app --reload
+ 1798  pwd
+ 1799  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1800  ource /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1801  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1802  cd ..
+ 1803  ls
+ 1804  grep -r "Base"
+ 1805  clear
+ 1806  cd app
+ 1807  ls
+ 1808  grep -r "Base"
+ 1809  alembic --help
+ 1810  alembic revision --help
+ 1811  alembic revision -m "Create Posts table"
+ 1812  cd ..
+ 1813  alembic revision -m "Create Posts table"
+ 1814  alembic durrent --help
+ 1815  alembic current --help
+ 1816  alembic current
+ 1817  clear
+ 1818  alembic current
+ 1819  cd app
+ 1820  alembic current
+ 1821  cd ..
+ 1822  ls
+ 1823  alembic current
+ 1824  Deactivate
+ 1825  deactivate
+ 1826  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1827  alembic current
+ 1828  clear
+ 1829  alembic current
+ 1830  echo $PATH
+ 1831  pip freeze
+ 1832  alembic current
+ 1833  alembic --help
+ 1834  alembic current
+ 1835  cd ..
+ 1836  alembic current
+ 1837  deactivate
+ 1838  alembic --help
+ 1839  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1840  alembic --help
+ 1841  alembic current
+ 1842  clear
+ 1843  alembic current
+ 1844  ource /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1845  source /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1846  cd app
+ 1847  uvicorn main:app --reload
+ 1848  deactivate
+ 1849  cd ..
+ 1850  ls
+ 1851  cd ..
+ 1852  ls
+ 1853  mkdir
+ 1854  mkdir backend
+ 1855  cd backend
+ 1856  makedir fastapi
+ 1857  makdir fastapi
+ 1858  mkdir fastapi
+ 1859  cd fastapi
+ 1860  ls
+ 1861  ource /Users/helix/Documents/Dev/Python_API/venv/bin/activate
+ 1862  cd backend/fastapi
+ 1863  vi main.py
+ 1864  deactivate
+ 1865  python3 -m venv venv
+ 1866  which python
+ 1867  which python3
+ 1868  source venv/bin/activate
+ 1869  which python
+ 1870  pip install fastapi [all]
+ 1871  pip install fastapi[all]
+ 1872  which pip
+ 1873  pip install "fastapi[all]"
+ 1874  /Users/helix/Documents/backend/fastapi/venv/bin/python3 -m pip install --upgrade pip
+ 1875  uvicorn main:app
+ 1876  clear
+ 1877  uvicorn main:app
+ 1878  uvicorn main:app --port 8888
+ 1879  uvicorn app.main:app --port 8888 --reload
+ 1880  ource /Users/helix/Documents/backend/fastapi/venv/bin/activate
+ 1881  source /Users/helix/Documents/backend/fastapi/venv/bin/activate
+ 1882  pip install pylance
+ 1883  source /Users/helix/Documents/backend/fastapi/venv/bin/activate
+ 1884  pip freeze
+ 1885  pip install --upgrade pylance
+ 1886  source /Users/helix/Documents/backend/fastapi/venv/bin/activate
+ 1887  /Users/helix/Documents/backend/fastapi/venv/bin/python /Users/helix/Documents/backend/fastapi/app/database.py
+ 1888  source /Users/helix/Documents/backend/fastapi/venv/bin/activate
+ 1889  deactivaye
+ 1890  pwd
+ 1891  cd Dev/Python_API
+ 1892  ls
+ 1893  deactivate
+ 1894  source venv/bin/activate
+ 1895  pip freeze
+ 1896  pip install psycopg2
+ 1897  pip install psycopg2-binary
+ 1898  pip install sqlalchemy
+ 1899  pip install python-jose[cryptography]
+ 1900  pip install "python-jose[cryptography]"
+ 1901  pip install "passlib[bcrypt]"
+ 1902  cd backend/fastapi
+ 1903  ls
+ 1904  uvicorn app.main:app -port 8888 --reload
+ 1905  uvicorn app.main:app --port 8888 --reload
+ 1906  pwd
+ 1907  deactivate
+ 1908  pwd
+ 1909  cd ..
+ 1910  ls
+ 1911  cd ..
+ 1912  ls
+ 1913  cd backend/fastapi
+ 1914  source venv/bin/activate
+ 1915  pip install alembic
+ 1916  alembic --help
+ 1917  alembic init alembic
+ 1918  alembic --revision
+ 1919  alembic revision -m "create posts table"
+ 1920  alembic current
+ 1921  uvicorn app.main:app --port 8888 --reload
+ 1922  alembic current
+ 1923  clear
+ 1924  alembic current
+ 1925  pd
+ 1926  pwd
+ 1927  grep -r "Database connection was successful"
+ 1928  clear
+ 1929  grep -r "Database connection was successful"
+ 1930  alembic current
+ 1931  clear
+ 1932  alembic current
+ 1933  clear
+ 1934  alembic current
+ 1935  clear
+ 1936  alembic current
+ 1937  clear
+ 1938  alembic current
+ 1939  clear
+ 1940  alembic current
+ 1941  clear
+ 1942  alembic current
+ 1943  clear
+ 1944  alembic current
+ 1945  alembic upgrade d6afb6875a2a
+ 1946  clear
+ 1947  alembic upgrade d6afb6875a2a
+ 1948  alembic revision -m "create users table"
+ 1949  alembic current
+ 1950  alembic head
+ 1951  alembic heads
+ 1952  alembic upgrade head
+ 1953  alembic current
+ 1954  alembic revision -m "add foreign key to post table"
+ 1955  alembic current
+ 1956  alembic upgrade cfd2422d8c30
+ 1957  alembic heads
+ 1958  alembic revision --autogenerate -m "add auto-vote"
+ 1959  alembic upgrade f8ff0045d4dc
+ 1960  uvicorn app.main:app -port 8888 --reload
+ 1961  uvicorn app.main:app --port 8888 --reload
+ 1962  pwd
+ 1963  pip freeze > requirements.txt
+ 1964  which git
+ 1965  source /Users/helix/Documents/backend/fastapi/venv/bin/activate
+ 1966  git --version
+ 1967  pwd
+ 1968  deactivate
+ 1969  cd backend
+ 1970  ls
+ 1971  git init
+ 1972  git add --all
+ 1973  git commit -m "initial commit"
+ 1974  git branch -M main
+ 1975  git remote add origin https://github.com/Decastrino/dev.git
+ 1976  git push -u origin main
+ 1977  which git
+ 1978  brew tap heroku/brew && brew install heroku
+ 1979  pwd
+ 1980  heroku --version
+ 1981  heroku login
+ 1982  heroku create --help
+ 1983  pwd
+ 1984  cd backend/fastapi
+ 1985  heroku create --help
+ 1986  heroku create fastapi-helix
+ 1987  git add --all
+ 1988  git commit -m "Added Procfile for heroku"
+ 1989  git push origin main
+ 1990  git push heroku main
+ 1991  git add --all
+ 1992  git commit -m "Added Procfile for heroku"
+ 1993  git push origin main
+ 1994  heroku addons:create heroku-postgresql:hobby-dev
+ 1995  heroku addons:create heroku-postgresql:hobby-development
+ 1996  cd backend/fastapi 
+ 1997  uvicorn app.main:app -port 8888 --reload
+ 1998  source venv/bin/activate
+ 1999  uvicorn app.main:app -port 8888 --reload
+ 2000  uvicorn app.main:app --port 8888 --reload
+ 2001  ssh root@164.90.147.193
+ 2002  ssh helix@164.90.147.193
+ 2003  pwd
+ 2004  git add
+ 2005  git add -a
+ 2006  git add --all
+ 2007  git commit -m "Modified git ignore file"
+ 2008  git push origin main
+ 2009  git add --all
+ 2010  git commit -m "Modified git ignore file"
+ 2011  git push origin main
+ 2012  ssh helix@164.90.147.193
+ 2013  pwd
+ 2014  ssh helix@164.90.147.193
+ 2015  git add --all
+ 2016  git commit -m "Modified requirements.txt file"
+ 2017  git push origin main
+ 2018  pwd
+ 2019  ls
+ 2020  ssh helix@164.90.147.193
+ 2021  git add --all
+ 2022  git commit -m "Added gunicorn.service file to create a run service for the application"
+ 2023  git push origin main
+ 2024  git add --all
+ 2025  git commit -m "Added gunicorn.service file to create a run service for the application"
+ 2026  git push origin main
+ 2027  git add --all
+ 2028  git commit -m "Added file for nginx server configuration to serve as procy to the gunicorn api server"
+ 2029  git push origin main
+ 2030  git add --all
+ 2031  git commit -m "Modified the user.py file"
+ 2032  git push origin main
+ 2033  uvicorn app.main:app --port 8888 --reload
+ 2034  cd ..
+ 2035  grep -r stats
+ 2036  grep - r "stats.py"
+ 2037  clear
+ 2038  cd backend/fastapi
+ 2039  ls
+ 2040  ls -lah
+ 2041  ssh helix@164.90.147.193
+ 2042  pwd
+ 2043  ssh helix@164.90.147.193
+ 2044  source /Users/helix/Documents/backend/fastapi/venv/bin/activate
+ 2045  ls
+ 2046  cd ..
+ 2047  ls
+ 2048  ls -lah
+ 2049  git add -a
+ 2050  git add --all
+ 2051  git commit -m "Modified main.py file"
+ 2052  git push origin main
+ 2053  which python
+ 2054  python --version
+ 2055  which docker
+ 2056  docker build -t fastapi --help
+ 2057  docker build -t fastapi .
+ 2058  ls
+ 2059  cd fastapi
+ 2060  ls
+ 2061  docker build -t fastapi .
+ 2062  pip install --upgrade pip setuptools
+ 2063  pip install numpy --only-binary :all:
+ 2064  pip list\n
+ 2065  pip freeze
+ 2066  pip freeze > requirements.txt
+ 2067  ls
+ 2068  rm requirements.txt
+ 2069  pip freeze > requirements.txt
+ 2070  pip freeze > requirements2.txt
+ 2071  pip install gunicorn
+ 2072  pip freeze > requirements2.txt
+ 2073  pip install greenlet
+ 2074  pip freeze > requirements2.txt
+ 2075  pip freeze > requirements.txt
+ 2076  git add --all
+ 2077  git commit -m "Modified requirements.py file"
+ 2078  git push origin main
+ 2079* ssh helix@164.90.147.193
+ 2080  ls
+ 2081  docker build -t fastapi .
+ 2082  pip install python-numpy swig python-dev
+ 2083  docker build -t fastapi .
+ 2084  clear
+ 2085  docker build -t fastapi .
+ 2086  docker image ls
+ 2087  docker-compose up --help
+ 2088  docker-compose up -d
+ 2089  docker ps -a
+ 2090  docker logs fast-api-1
+ 2091  docker logs fastapi-api-1
+ 2092  docker-compose down
+ 2093  docker-compose up -d
+ 2094  docker-compose down
+ 2095  docker-compose up -d
+ 2096  docker-compose down
+ 2097  docker-compose up -d
+ 2098  docker-compose down
+ 2099  docker ps -a
+ 2100  docker-compose up -d
+ 2101  docker-compose down
+ 2102  docker-compose up -d
+ 2103  docker-compose down
+ 2104  docker-compose up -d
+ 2105  lsof -i tcp:5432
+ 2106  docker-compose down
+ 2107  clear
+ 2108  docker-compose up -d
+ 2109  docker ps -a
+ 2110  docker logs fastapi-api-1
+ 2111  docker-compose down
+ 2112  lsof -i tcp:5432
+ 2113  kill 1254
+ 2114  lsof -i tcp:5432
+ 2115  docker-compose up -d
+ 2116  lsof -i tcp:5432
+ 2117  docker-compose down
+ 2118  docker-compose up -d
+ 2119  docker ps -a
+ 2120  docker-compose down
+ 2121  docker ps -a
+ 2122  docker-compose up -d
+ 2123  docker ps -a
+ 2124  lsof -i tcp:5432
+ 2125  lsof -i tcp:5433
+ 2126  docker logs fastapi-api-1
+ 2127  ps aux | grep postgres
+ 2128  kill 19190
+ 2129  kill 959
+ 2130  pgrep postgres
+ 2131  kill 555
+ 2132  kill 555819
+ 2133  kill 819
+ 2134  kill 1299
+ 2135  kill 1298
+ 2136  kill 1297
+ 2137  kill 1295
+ 2138  kill 1294
+ 2139  kill 1293
+ 2140  kill 959
+ 2141  pgrep postgres
+ 2142  kill 956
+ 2143  ps aux | grep postgres
+ 2144  kill 19697
+ 2145  netstat -a
+ 2146  netstat -a | grep postgres
+ 2147  clear
+ 2148  docker-compose down
