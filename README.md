@@ -1,5 +1,22 @@
 Backend implementation of a social media app by using FastAPI
 
+- Authentication
+- CRUD Operations
+- Input Validation
+- Documentation
+
+Tooling
+
+- Python
+- PostgreSQL
+- SQL with Psycopg2, SQLALCHEMY as the ORM
+- Postman to construct HTTP packets
+- Alembic for database migrations
+- Pydantic for input validation
+- JWT for authentication, Passlib with Bcrtpt as its encryption engine
+- Docker
+- Nginx as a reverse proxy
+
 ----------------
 Routes
 ----------------
@@ -45,11 +62,17 @@ After running this API, you'll need a database in postgres
 Create a database in postgres then create a file name .env and write the following things in your file (config file)
 
 DATABASE_HOSTNAME = localhost
+
 DATABASE_PORT = 5432
+
 DATABASE_PASSWORD = passward_that_you_set
+
 DATABASE_NAME = name_of_database
+
 DATABASE_USERNAME = User_name
-SECRET_KEY = 09d25e094faa2556c818166b7a99f6f0f4c3b88e8d3e7 
+
+SECRET_KEY = 09d25e094faa2556c818166b7a99f6f0f4c3b88e8d3421
+
 ALGORITHM = HS256
 ACCESS_TOKEN_EXPIRE_MINUTES = 60(base)
 
