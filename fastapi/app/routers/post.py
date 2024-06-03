@@ -5,6 +5,12 @@ from ..database import engine, get_db
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 
+from fastapi import Request
+import logging
+
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+
 # import Depends allows the use of dependency in the path operation.
 # Allows testing to become easier. Simply states that the db in the path operation
 # function uses/has dependency on the get_db() function to create and close db sessions.
@@ -44,14 +50,27 @@ async def create_post(data: schema.Post, db: Session = Depends(get_db), current_
 # This endpoint returns a list of records from the database
 # and the schema will try to group all into a single response value
 # resulting in an error.
-@router.get("/", response_model= List[PostOut])
-async def get_posts(db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user), limit: int = 10,
-                    offset: int = 0, search: Optional[str] = ""):
+# @router.get("/", response_model= List[PostOut])
+# async def get_posts(db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user), limit: int = 10,
+#                     offset: int = 0, search: Optional[str] = ""):
 
-    # posts = db.query(models.Post).filter(models.Post.content.contains(search)).limit(limit).offset(offset).all()
-    # print(posts)
-    #posts = db.query(models.Post).filter(models.Post.owner_id == current_user.id).all() # Get all posts relating to the logged in user
+#     # posts = db.query(models.Post).filter(models.Post.content.contains(search)).limit(limit).offset(offset).all()
+#     # print(posts)
+#     #posts = db.query(models.Post).filter(models.Post.owner_id == current_user.id).all() # Get all posts relating to the logged in user
     
+#     posts = db.query(models.Post, func.count(models.Vote.post_id).label("votes")).join(
+#         models.Vote, models.Vote.post_id == models.Post.id, isouter=True).group_by(models.Post.id).filter(
+#             models.Post.title.contains(search)).limit(limit).offset(offset).all()
+#     if not posts:
+#         return HTTPException(status_code=status.HTTP_404_NOT_FOUND, 
+#                              detail=f"No Posts found")
+#     return posts
+
+@router.get("/", response_model= List[PostOut])
+async def get_posts(request: Request, db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user),
+                    limit: int = 10, offset: int = 0, search: Optional[str] = ""):
+    print(f"Request is {request.base_url}")
+    logging.info(f"Request is {request.headers}")
     posts = db.query(models.Post, func.count(models.Vote.post_id).label("votes")).join(
         models.Vote, models.Vote.post_id == models.Post.id, isouter=True).group_by(models.Post.id).filter(
             models.Post.title.contains(search)).limit(limit).offset(offset).all()
@@ -59,7 +78,6 @@ async def get_posts(db: Session = Depends(get_db), current_user: int = Depends(o
         return HTTPException(status_code=status.HTTP_404_NOT_FOUND, 
                              detail=f"No Posts found")
     return posts
-
     
 
 # Get a specific post
@@ -70,10 +88,6 @@ async def get_one_post(id: int, db: Session = Depends(get_db), current_user: int
     
     post = db.query(models.Post, func.count(models.Vote.post_id).label("votes")).join(
         models.Vote, models.Vote.post_id == models.Post.id, isouter=True).group_by(models.Post.id).filter(models.Post.id == int(id)).first()
-
-    if not post:
-        return HTTPException(status_code=status.HTTP_404_NOT_FOUND, 
-                             detail=f"Post with id {id} not found")
     
     return post
 

@@ -19,9 +19,10 @@ router = APIRouter(tags=["Authentication"])
 # This basically creates access token and returns it to the user/client
 # Client then uses this token for further communication with the backend.
 
-#@router.post('/login', response_model=schema.Token)
 @router.post('/login', response_model=schema.Token)
 async def login(loginInfo: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    print(f"The login info is: {loginInfo}")
+    print(f"OAuth2PasswordRequestForm is {OAuth2PasswordRequestForm.__str__}")
     username = loginInfo.username
     user_password = loginInfo.password
     
