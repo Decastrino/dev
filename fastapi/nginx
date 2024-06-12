@@ -2,7 +2,7 @@ server {
         listen 80 default_server;
         listen [::]:80 default_server;
 
-        server_name _; # replace with specific domain name like sanjeev.com
+        server_name _; # replace with specific domain name like helix.com
         
         location / {
                 proxy_pass http://localhost:8000;
@@ -16,4 +16,20 @@ server {
                 proxy_redirect off;
         }
 
+}
+
+# Load Balancing with Nginx
+http {
+    upstream app_servers {
+        server app_server1:8000;
+        server app_server2:8000;
+        server app_server3:8000;
+    }
+
+    server {
+        listen 80;
+        location / {
+            proxy_pass http://app_servers;
+        }
+    }
 }
