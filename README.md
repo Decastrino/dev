@@ -29,6 +29,8 @@ https://docs.pydantic.dev/2.5/
 PyTest, for testing API endpoints:
 https://docs.pytest.org/en/8.0.x/getting-started.html
 
+## The Project
+
 Backend implementation of a social media app by using FastAPI
 
 - Authentication
