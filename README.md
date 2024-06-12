@@ -1,5 +1,34 @@
 README for the social media - like app developed using fastAPI. This gives a brief summary of what the project is about.
 
+Useful links/Resources for developing with fastAPI, SQLAlchemy, Alembic (DB migration)...:
+https://fastapi.tiangolo.com/tutorial/
+
+FastAPI: OAuth2 for Authentication(Password hashing and bearer--JWT):
+https://fastapi.tiangolo.com/tutorial/security/oauth2-jwt/#__tabbed_1_4
+
+Requests Library:
+https://www.starlette.io/requests/
+
+Gunicorn vs Uvicorn:
+https://ismatsamadov.medium.com/gunicorn-vs-uvicorn-369635b92809#:~:text=In%20essence%2C%20both%20Gunicorn%20and,star%20for%20modern%20ASGI%20applications.
+
+Deploying FastAPI with NginX and Gunicorn
+https://dylancastillo.co/fastapi-nginx-gunicorn/#:~:text=Gunicorn%20is%20a%20popular%20web,server%20for%20Starlette%20and%20FastAPI.
+
+SQLAlchemy (ORM for Python SQL):
+https://www.sqlalchemy.org
+https://fastapi.tiangolo.com/tutorial/sql-databases/
+
+Alembic for database migrations. Alembic provides for the creation, management, and invocation of change management scripts for a relational database,
+using SQLAlchemy as the underlying engine:
+https://alembic.sqlalchemy.org/en/latest/tutorial.html
+
+Data Validation using Pydantic Library:
+https://docs.pydantic.dev/2.5/
+
+PyTest, for testing API endpoints:
+https://docs.pytest.org/en/8.0.x/getting-started.html
+
 Backend implementation of a social media app by using FastAPI
 
 - Authentication
