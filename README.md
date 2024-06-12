@@ -1,6 +1,10 @@
 README for the social media - like app developed using fastAPI. This gives a brief summary of what the project is about.
 
-Useful links/Resources for developing with fastAPI, SQLAlchemy, Alembic (DB migration)...:
+## Links
+
+## Useful links/Resources for developing with fastAPI, SQLAlchemy, Alembic (DB migration)...:
+
+FastAPI Documentation:
 https://fastapi.tiangolo.com/tutorial/
 
 FastAPI: OAuth2 for Authentication(Password hashing and bearer--JWT):
