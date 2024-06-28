@@ -1,6 +1,0 @@
-./daycareMgt/.env
-./daycareMgt/venv
-./daycareMgt/services
-./daycareMgt/tests
-./daycareMgt/main.py
-./testing
