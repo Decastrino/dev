@@ -1,5 +1,5 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Float, Boolean, Time, Date, Enum as SQLEnum
-# from sqlalchemy import Column, Enum
+from sqlalchemy import Column, Integer, String, ForeignKey, Float
+from sqlalchemy import  DateTime, Boolean, Time, Date, Enum as SQLEnum, UniqueConstraint
 from sqlalchemy.orm import relationship
 from .database import Base
 from datetime import datetime, time
@@ -8,13 +8,13 @@ from sqlalchemy.sql.sqltypes import TIMESTAMP
 from sqlalchemy.sql.expression import text
 
 class Weekday(enum.Enum):
-    MONDAY = "Monday"
-    TUESDAY = "Tuesday"
-    WEDNESDAY = "Wednesday"
-    THURSDAY = "Thursday"
-    FRIDAY = "Friday"
-    SATURDAY = "Saturday"
-    SUNDAY = "Sunday"
+    Monday = "Monday"
+    Tuesday = "Tuesday"
+    Wednesday = "Wednesday"
+    Thursday = "Thursday"
+    Friday = "Friday"
+    Saturday = "Saturday"
+    Sunday = "Sunday"
 
 class User(Base):
     __tablename__ = "users"
@@ -30,10 +30,9 @@ class User(Base):
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
     
     #child_id = Column(Integer, ForeignKey("children.id", ondelete="CASCADE"), nullable=False)
-    # children = relationship("Child")
+    children = relationship("Child", back_populates="parent")
 
-    
-    
+
 class Child(Base):
     __tablename__ = "children"
     
@@ -43,10 +42,8 @@ class Child(Base):
     parent_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
     
-    parent = relationship("User")
-    bookings = relationship("Booking")
-
-
+    parent = relationship("User", back_populates="children")
+    bookings = relationship("Booking", back_populates="child")
 
 class Booking(Base):
     __tablename__ = "bookings"
@@ -54,24 +51,34 @@ class Booking(Base):
     id = Column(Integer, primary_key=True, index=True, nullable=False)
     child_id = Column(Integer, ForeignKey("children.id"), nullable=False)
     activity_name = Column(String, nullable=False)
-    date = Column(Date, nullable=False)
-    start_time = Column(TIMESTAMP(timezone=True), nullable=False)
-    end_time = Column(TIMESTAMP(timezone=True), nullable=False)
-    start_time = Column(Time, nullable=False)
-    end_time = Column(Time, nullable=False)
+    booking_datetime = Column(DateTime, nullable=False)
+    start_time = Column(DateTime, nullable=False)
+    end_time = Column(DateTime, nullable=False)
+    operational_hours_id = Column(Integer, ForeignKey("operational_hours.id"), nullable=True)
 
+    child = relationship("Child", back_populates="bookings")
+    operational_hours = relationship("OperationalHours")
 
+class OperationalHours(Base):
+    __tablename__ = "operational_hours"
+    
+    id = Column(Integer, primary_key=True, index=True)
+    weekday = Column(SQLEnum(Weekday))
+    specific_datetime = Column(DateTime, nullable=True)
+    start_time = Column(DateTime, nullable=False)
+    end_time = Column(DateTime, nullable=False)
+    
+    __table_args__ = (UniqueConstraint('weekday', 'specific_datetime', name='_weekday_specific_datetime_uc'),)
 
 class Schedule(Base):
     __tablename__ = "schedules"
     
     id = Column(Integer, primary_key=True, index=True)
     activity_name = Column(String)
-    start_time = Column(TIMESTAMP(timezone=True), nullable=False)
-    end_time = Column(TIMESTAMP(timezone=True), nullable=False)
     start_time = Column(Time, nullable=False)
     end_time = Column(Time, nullable=False)
     weekday = Column(SQLEnum(Weekday), nullable=False)
+    # capacity = Column(Integer, default=0)
 
     
 class Billing(Base):
@@ -108,18 +115,4 @@ class Notification(Base):
     
     recipient = relationship("User")
 
-
-class OperationalHours(Base):
-    __tablename__ = "operational_hours"
-
-    # start_time = Column(TIMESTAMP(timezone=True), nullable=False)
-    # end_time = Column(TIMESTAMP(timezone=True), nullable=False)
-    weekday = Column(SQLEnum(Weekday), primary_key=True)
-    start_time = Column(Time, nullable=False)
-    end_time = Column(Time, nullable=False)
-    
-    
-    
-    
-    
     

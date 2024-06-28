@@ -132,7 +132,7 @@ async def update_user(id: int, updated_user: schema.UserCreate, current_user: in
     
 
 # Get all users
-@app.get("/users", response_model=List[schema.UserResponse])
+@app.get("/admin/users", response_model=List[schema.UserResponse])
 #@app.get("/users")
 async def get_all_users(db: Session = Depends(get_db)):
     # print(f"All users: {temp_db}")
@@ -363,26 +363,39 @@ async def get_todays_schedule(db: Session = Depends(get_db)):
     return schedule
 
 
-# Create booking
+#############################################################################################################################################
+# Booking and operational hours
+#############################################################################################################################################
+
+
 @app.post("/bookings/{child_id}", response_model=schema.BookingCreate, status_code=status.HTTP_201_CREATED)
 async def book_child(child_id: int, booking: schema.BookingCreate, db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user)):
     
-    operational_hours = db.query(models.OperationalHours).filter(models.OperationalHours.weekday == booking.date.strftime('%A').upper()).first()
+    booking_weekday = booking.booking_datetime.strftime('%A')
+    
+    # Find operational hours for the specific date or the weekday
+    operational_hours = db.query(models.OperationalHours).filter(
+        (models.OperationalHours.specific_datetime == booking.booking_datetime) | 
+        (models.OperationalHours.weekday == booking_weekday)).first()
+    
+    print(f"Operational hours: {operational_hours}")
     
     if not operational_hours:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail="No operational hours defined for this day")
-        
+    
+    # Check if the booking time falls within operational hours
     if not (operational_hours.start_time <= booking.start_time <= operational_hours.end_time and
             operational_hours.start_time <= booking.end_time <= operational_hours.end_time):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
                             detail="Booking time is outside of operational hours")
         
-    capacity = db.query(models.Booking).filter(models.Booking.date == booking.date,
+    capacity = db.query(models.Booking).filter(models.Booking.booking_datetime == booking.booking_datetime,
                                                models.Booking.start_time == booking.start_time,
                                                models.Booking.end_time == booking.end_time).count()
     
-    if capacity >= 5:  # Assuming the capacity limit is 5
+    # Check for capacity
+    if capacity >= 5:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
                             detail="No available capacity for the requested time slot")
         
@@ -402,10 +415,59 @@ async def book_child(child_id: int, booking: schema.BookingCreate, db: Session =
     db.refresh(db_booking)
     
     # Trigger notification to parent about successful booking
-    notification_message = f"Booking for {booking.date} from {booking.start_time} to {booking.end_time} successfully created."
-    create_message(current_user.id, notification_message, db)
+    #notification_message = f"Booking for {booking.booking_datetime} from {booking.start_time} to {booking.end_time} successfully created."
+    #create_message(current_user.id, notification_message, db)
     
     return db_booking
+
+@app.get("/admin/bookings/", response_model=list[schema.AdminBookingResponse])
+def read_operational_hours(skip: int = 0, limit: int = 7, db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user)):
+
+    if not current_user.is_admin:
+        return HTTPException(status_code=status.HTTP_403_FORBIDDEN, 
+                             detail=f"Current user not authorized perform operation")
+
+    return db.query(models.Booking).offset(skip).limit(limit).all()
+
+
+@app.get("/bookings/", response_model=list[schema.BookingResponse])
+def read_operational_hours(skip: int = 0, limit: int = 7, db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user)):
+    
+    children_ids = db.query(models.Child.id).filter(models.Child.parent_id == current_user.id).all()
+    children_ids = [id[0] for id in children_ids]
+    print(f"Children_ids: {children_ids}")
+    bookings =  db.query(models.Booking).filter(models.Booking.child_id.in_(children_ids)).offset(skip).limit(limit).all()
+    
+    return bookings
+
+
+# Create or modify operational hours
+@app.post("/admin/operational-hours/", response_model=schema.OperationalHoursCreate)
+def create_or_update_operational_hours(operational_hours: schema.OperationalHoursCreate, weekday: schema.Weekday = None, db: Session = Depends(get_db)):
+    existing_hours = db.query(models.OperationalHours).filter(models.OperationalHours.weekday == operational_hours.weekday).first()
+
+    if existing_hours:
+        existing_hours.weekday=operational_hours.weekday,
+        existing_hours.specific_datetime=operational_hours.specific_datetime,
+        existing_hours=operational_hours.end_time
+        existing_hours.start_time=operational_hours.start_time,
+        existing_hours.end_time = operational_hours.end_time
+        
+        db.commit()
+        db.refresh(existing_hours)
+        return existing_hours
+    else:
+        print("Helix: Creating new op hour")
+        db_operational_hours = models.OperationalHours(**operational_hours.dict())
+        db.add(db_operational_hours)
+    db.commit()
+    db.refresh(db_operational_hours)
+    return db_operational_hours
+
+
+@app.get("/admin/operational-hours/", response_model=list[schema.OperationalHoursCreate])
+def read_operational_hours(skip: int = 0, limit: int = 7, db: Session = Depends(get_db)):
+    return db.query(models.OperationalHours).offset(skip).limit(limit).all()
 
 
 #############################################################################################################################################
@@ -489,31 +551,6 @@ def create_notification(notification: schema.NotificationCreate, db: Session = D
     db.refresh(db_notification)
     return db_notification
 
-
-
-#############################################################################################################################################
-# Operational hours
-#############################################################################################################################################
-
-# Create or modify operational hours
-@app.post("/operational-hours/", response_model=schema.OperationalHoursCreate)
-@app.put("/operational-hours/{weekday}", response_model=schema.OperationalHoursCreate)
-def create_or_update_operational_hours(operational_hours: schema.OperationalHoursCreate, weekday: schema.Weekday = None, db: Session = Depends(get_db)):
-    if weekday:
-        db_operational_hours = db.query(models.OperationalHours).filter(models.OperationalHours.weekday == weekday).first()
-
-        if not db_operational_hours:
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
-                                detail="Operational hours not found for this weekday")
-
-        for key, value in operational_hours.dict().items():
-            setattr(db_operational_hours, key, value)
-    else:
-        db_operational_hours = models.OperationalHours(**operational_hours.dict())
-        db.add(db_operational_hours)
-    db.commit()
-    db.refresh(db_operational_hours)
-    return db_operational_hours
 
 @app.get('/')
 async def main():

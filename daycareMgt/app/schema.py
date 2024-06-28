@@ -4,13 +4,13 @@ from datetime import time, date, datetime
 from enum import Enum
 
 class Weekday(str, Enum):
-    MONDAY = "Monday"
-    TUESDAY = "Tuesday"
-    WEDNESDAY = "Wednesday"
-    THURSDAY = "Thursday"
-    FRIDAY = "Friday"
-    SATURDAY = "Saturday"
-    SUNDAY = "Sunday"
+    Monday = "Monday"
+    Tuesday = "Tuesday"
+    Wednesday = "Wednesday"
+    Thursday = "Thursday"
+    Friday = "Friday"
+    Saturday = "Saturday"
+    Sunday = "Sunday"
 
 ###############################################################
 # User Schema
@@ -147,36 +147,38 @@ class ScheduleResponse(BaseModel):
 ###############################################################
 
 class BookingCreate(BaseModel):
-    # date: str
-    # start_time: str
-    # end_time: str
     child_id: int
     activity_name: str
-    date: date
-    start_time: time
-    end_time: time
-    
+    booking_datetime: datetime
+    start_time: datetime
+    end_time: datetime
+
 class BookingResponse(BaseModel):
     id: int
+    child_id: int
     activity_name: str
-    date: date
-    start_time: time
-    end_time: time
-    # start_time: datetime
-    # end_time: datetime
+    booking_datetime: datetime
+    start_time: datetime
+    end_time: datetime
+    
+    class Config:
+        orm_mode = True
+        
+class AdminBookingResponse(BookingResponse):
+    child: ChildResponse
     
     class Config:
         orm_mode = True
 
 class OperationalHoursCreate(BaseModel):
     weekday: Weekday
-    start_time: time
-    end_time: time
-    # opening_time: str
-    # closing_time: str
+    specific_datetime: Optional[datetime] = None
+    start_time: datetime
+    end_time: datetime
     
 class OperationalHoursResponse(BaseModel):
     weekday: Weekday
+    specific_date: Optional[datetime]
     start_time: time
     end_time: time
     
