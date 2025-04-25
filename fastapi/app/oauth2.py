@@ -47,23 +47,28 @@ def create_access_token(data: dict):
     to_encode.update({"exp": expire})
     encoded_token = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     
-    print(f"Created access token for user: {data}")
+    # print(f"Created access token for user: {data}")
+    # print(f"Created token is {encoded_token}")
 
     return encoded_token
     
 def verify_access_token(token: str, credential_exceptions):
+    # Remove 'Bearer ' prefix if it exists
+    if token.startswith("Bearer "):
+        token = token[len("Bearer "):]
+
     try:
         payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        print(f"After decoding: {payload}") # After decoding: {'user_id': 8, 'exp': 1714704712}
-        print(f"Type of payload[user_id] is: {type(payload['user_id'])}") # Typr of payload[user_id] is: <class 'int'>
+        # print(f"After decoding: {payload}") # After decoding: {'user_id': 8, 'exp': 1714704712}
+        # print(f"Type of payload[user_id] is: {type(payload['user_id'])}") # Typr of payload[user_id] is: <class 'int'>
         id: str = payload.get("user_id")
-        print(f"Type of id is: {type(id)}")
+        # print(f"Type of id is: {type(id)}")
         if not id:
             raise  credential_exceptions
 
         #token_data = schema.TokenData(id=id)
         token_data = schema.TokenData(id=str(id))
-        print(f"In verify, token data is {token_data}")
+        # print(f"In verify, token data is {token_data}")
     except JWTError:
         raise  credential_exceptions
     return token_data
@@ -75,7 +80,7 @@ def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(
                                           headers={"WWW-Authenticate":"Bearer"})
     
     token = verify_access_token(token, credential_exceptions)
-    print(f"In get_current, returned token from verify_access_token is {token}")
+    # print(f"In get_current, returned token from verify_access_token is {token}")
     user = db.query(models.User).filter(models.User.id == token.id).first()
     
     #return verify_access_token(token, credential_exceptions)

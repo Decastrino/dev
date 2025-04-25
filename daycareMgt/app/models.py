@@ -31,6 +31,9 @@ class User(Base):
     
     #child_id = Column(Integer, ForeignKey("children.id", ondelete="CASCADE"), nullable=False)
     children = relationship("Child", back_populates="parent")
+    
+    payments = relationship("Payment", back_populates="user")
+    notifications = relationship("Notification", back_populates="recipient")
 
 
 class Child(Base):
@@ -44,6 +47,7 @@ class Child(Base):
     
     parent = relationship("User", back_populates="children")
     bookings = relationship("Booking", back_populates="child")
+    billings = relationship("Billing", back_populates="child")
 
 class Booking(Base):
     __tablename__ = "bookings"
@@ -89,7 +93,7 @@ class Billing(Base):
      amount = Column(Float, nullable=False)
      billing_date = Column(DateTime, default=datetime.utcnow)
      
-     children = relationship("Child")
+     child = relationship("Child", back_populates="billings")
 
 class Payment(Base):
     __tablename__ = "payments"
@@ -103,7 +107,7 @@ class Payment(Base):
     date = Column(DateTime, default=datetime.utcnow)
     created_at = Column(TIMESTAMP(timezone=True), server_default=text('now()'))
 
-    user = relationship("User")
+    user = relationship("User", back_populates="payments")
     
 class Notification(Base):
     __tablename__ = "notifications"
@@ -113,6 +117,6 @@ class Notification(Base):
     message = Column(String(255), nullable=False)
     sent_at = Column(DateTime, default=datetime.utcnow)
     
-    recipient = relationship("User")
+    recipient = relationship("User", back_populates="notifications")
 
     

@@ -1,8 +1,9 @@
 from fastapi import FastAPI, Response, status, HTTPException, Depends
 from . import models, schema
-from .database import get_db
+from .database import get_db, mongodb_db
 from sqlalchemy.orm import Session
 from typing import List
+from sqlalchemy import and_
 
 from fastapi import Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -15,7 +16,7 @@ import stripe
 
 from jose import JWTError, jwt
 from datetime import datetime, timedelta
-from . import schema, database, models
+from . import schema, models
 from sqlalchemy.orm import Session
 
 from . import schema, oauth2, models, utils
@@ -367,7 +368,6 @@ async def get_todays_schedule(db: Session = Depends(get_db)):
 # Booking and operational hours
 #############################################################################################################################################
 
-
 @app.post("/bookings/{child_id}", response_model=schema.BookingCreate, status_code=status.HTTP_201_CREATED)
 async def book_child(child_id: int, booking: schema.BookingCreate, db: Session = Depends(get_db), current_user: int = Depends(oauth2.get_current_user)):
     
@@ -378,8 +378,6 @@ async def book_child(child_id: int, booking: schema.BookingCreate, db: Session =
         (models.OperationalHours.specific_datetime == booking.booking_datetime) | 
         (models.OperationalHours.weekday == booking_weekday)).first()
     
-    print(f"Operational hours: {operational_hours}")
-    
     if not operational_hours:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                             detail="No operational hours defined for this day")
@@ -389,25 +387,30 @@ async def book_child(child_id: int, booking: schema.BookingCreate, db: Session =
             operational_hours.start_time <= booking.end_time <= operational_hours.end_time):
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
                             detail="Booking time is outside of operational hours")
-        
-    capacity = db.query(models.Booking).filter(models.Booking.booking_datetime == booking.booking_datetime,
+    
+    # Check for capacity
+    capacity = db.query(models.Booking).filter(and_(models.Booking.booking_datetime == booking.booking_datetime,
                                                models.Booking.start_time == booking.start_time,
-                                               models.Booking.end_time == booking.end_time).count()
+                                               models.Booking.end_time == booking.end_time)).count()
     
     # Check for capacity
     if capacity >= 5:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,
-                            detail="No available capacity for the requested time slot")
+                            detail="No availability for the requested time slot, max capacity reached")
         
     child = db.query(models.Child).filter(models.Child.id == child_id).first()
     if not child:
         return HTTPException(status_code=status.HTTP_404_NOT_FOUND, 
                              detail=f"Child with id {id} not found")
     
-
     if not current_user.is_admin and child.parent_id != current_user.id:
         return HTTPException(status_code=status.HTTP_403_FORBIDDEN, 
                              detail=f"Current user not authorized to create bookings for child with id {child_id}")
+        
+    # Check if payment exists for this booking (simple example, could be extended)
+    payment = db.query(models.Payment).filter(models.Payment.user_id == current_user.id).first()
+    if not payment:
+        raise HTTPException(status_code=status.HTTP_402_PAYMENT_REQUIRED, detail="Payment is required before booking")
 
     db_booking = models.Booking(**booking.dict())
     db.add(db_booking)
@@ -415,8 +418,8 @@ async def book_child(child_id: int, booking: schema.BookingCreate, db: Session =
     db.refresh(db_booking)
     
     # Trigger notification to parent about successful booking
-    #notification_message = f"Booking for {booking.booking_datetime} from {booking.start_time} to {booking.end_time} successfully created."
-    #create_message(current_user.id, notification_message, db)
+    notification_message = f"Booking for {booking.booking_datetime} from {booking.start_time} to {booking.end_time} successfully created."
+    create_message(current_user.id, notification_message, db)
     
     return db_booking
 
@@ -545,12 +548,35 @@ def create_message(recipient_id: int, message: str, db: Session = Depends(get_db
 # Create notification
 @app.post("/notifications/", response_model=schema.NotificationCreate)
 def create_notification(notification: schema.NotificationCreate, db: Session = Depends(get_db)):
-    db_notification = models.Notification(**notification.dict())
-    db.add(db_notification)
-    db.commit()
-    db.refresh(db_notification)
-    return db_notification
+    
+    recipient_id = notification.recipient_id
+    message = notification.message
+    create_message(recipient_id, message)
+    return {"message": "Notification created"}
 
+
+def create_a_notification(recipient_id: int, message: str):
+    notification = {
+        "recipient_id": recipient_id,
+        "message": message,
+        "sent_at": datetime.utcnow()
+        }
+    mongodb_db.notifications.insert_one(notification)
+    
+def get_notifications_for_user(user_id: int):
+    return list(mongodb_db.notifications.find({"recipient_id": user_id}))
+
+@app.post("/notifications/")
+def create_notification_endpoint(recipient_id: int, message: str):
+    create_notification(recipient_id, message)
+    return {"message": "Notification created"}
+
+@app.get("/notifications/{user_id}")
+def get_notifications(user_id: int):
+    notifications = get_notifications_for_user(user_id)
+    return notifications
+
+###################################################################################################
 
 @app.get('/')
 async def main():

@@ -25,3 +25,9 @@ def get_db():
         yield db
     finally:
         db.close()
+        
+from pymongo import MongoClient
+from datetime import datetime
+
+client = MongoClient("mongodb://localhost:27017/")
+mongodb_db = client.mydatabase
